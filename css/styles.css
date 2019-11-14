@@ -42,7 +42,7 @@
   animation: spin 1.5s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
   border-radius: 50%;
   border: 3px solid transparent;
-  border-top-color: #EF4B63;
+  border-top-color: var(--beige);
   bottom: 15px;
   content: "";
   left: 15px;
@@ -136,6 +136,7 @@
 body {
   background-color: var(--beige);
   font-family: var(--font);
+  font-size: 1rem;
 }
 
 .fading-background {
@@ -180,4 +181,46 @@ body {
 }
 body:not(.loaded) .fading-background:before {
   background-color: var(--dark-brown);
+}
+
+/*
+ * Bug fix per page scroll plugin
+ */
+.content {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+/*
+ * Home page
+ */
+
+#canvas {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+}
+
+#logo {
+  padding-left: 4rem;
+  padding-top: 4rem;
+  width: 250px;
+}
+h1 {
+  border-bottom: solid 0.5px white;
+  bottom: 0%;
+  color: white;
+  font-weight: 300;
+  letter-spacing: 3px;
+  line-height: 50px;
+  margin-bottom: -50px;
+  position: absolute;
+  text-align: center;
+  transform-origin: 0 0;
+  transform: rotate(270deg);
+  width: 100vh;
 }
