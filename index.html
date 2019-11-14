@@ -11,7 +11,14 @@
     <script src="node_modules/fullpage.js/vendors/scrolloverflow.js"></script>
     <script src="node_modules/fullpage.js/dist/fullpage.js"></script>
     <script src="js/script.js"></script>
-
+    <script src="node_modules/webfontloader/webfontloader.js"></script>
+    <script>
+            WebFont.load({
+              google: {
+                families: ["Lato:400, 700", 'Anonymous Pro']
+              }
+            });
+          </script>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="node_modules/fullpage.js/dist/fullpage.css">
@@ -24,15 +31,18 @@
         <div id="loader"></div>
         <div class="loader-section section-left"></div>
         <div class="loader-section section-right"></div>
-
     </div>
 
     <div id="content">
         <div id="fullpage">
-            <div class="section">Some section 1111111</div>
-            <div class="section">Some section 2222222</div>
-            <div class="section">Some section 3333333</div>
-            <div class="section">Some section 4444444</div>
+            <div class="section" id="section-home">
+              <div class="fading-background"></div>
+              <canvas id="canvas"></canvas>
+            </div>
+            <div class="section" id="section-profilo">Some section 2222222</div>
+            <div class="section" id="section-esperienze">Some section 3333333</div>
+            <div class="section" id="section-portfolio">Some section 4444444</div>
+            <div class="section" id="section-contatti">Some section 5555555</div>
         </div>
     </div>
 

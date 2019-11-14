@@ -132,3 +132,52 @@
 .no-js #loader-wrapper {
   display: none;
 }
+
+body {
+  background-color: var(--beige);
+  font-family: var(--font);
+}
+
+.fading-background {
+  backface-visibility: hidden;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  /* transform: scale(1); */
+  width: 100%;
+  z-index: 0;
+}
+.fading-background:before,
+.fading-background:after {
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.fading-background:before {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), transparent);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  transition-delay: 2s;
+  transition: background-color 3.5s ease-in-out;
+  z-index: 2;
+}
+
+.fading-background:after {
+  background-image: url("../img/sfondo-elena.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* transform: scale(1);
+  transition: transform 0.3255s ease-in-out; */
+  z-index: 1;
+}
+body:not(.loaded) .fading-background:before {
+  background-color: var(--dark-brown);
+}
