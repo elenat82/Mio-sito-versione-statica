@@ -172,4 +172,13 @@ $(document).ready(function () {
         window.onload = init;
         window.onresize = onResize;
         window.requestAnimationFrame = requestAnimationFrame();
+
+        var ps = new Photostack(document.getElementById("photostack"), { callback: function (item) { } });
+        $("#cartolina-prec").click(function () {
+                ps.navigate("prev");
+        });
+
+        $("#cartolina-succ").click(function () {
+                ps.navigate("next");
+        });
 });
