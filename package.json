@@ -16,6 +16,7 @@
   "dependencies": {
     "fullpage.js": "^3.0.7",
     "jquery": "^3.4.1",
+    "jquery-animated-headlines": "^1.0.0",
     "webfontloader": "^1.6.28"
   }
 }

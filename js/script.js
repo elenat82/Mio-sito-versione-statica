@@ -2,6 +2,9 @@ $(document).ready(function () {
         //introanimation
         setTimeout(function () {
                 $('body').addClass('loaded');
+                $('.title-animation').animatedHeadline({
+                        animationType: 'rotate-3'
+                });
         }, 3000);
 
         //fullpage plugin
@@ -11,6 +14,7 @@ $(document).ready(function () {
                 recordHistory: false,
                 navigation: true,
                 navigationPosition: "right",
+                showActiveTooltip: true,
                 verticalCentered: false
         });
 

@@ -2,56 +2,74 @@
 <html lang="it">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Elena Trudini | Front End Developer</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Elena Trudini | Front End Developer</title>
 
-    <script src="node_modules/jquery/dist/jquery.js"></script>
-    <script src="node_modules/fullpage.js/vendors/scrolloverflow.js"></script>
-    <script src="node_modules/fullpage.js/dist/fullpage.js"></script>
-    <script src="js/script.js"></script>
-    <script src="node_modules/webfontloader/webfontloader.js"></script>
-    <script>
-            WebFont.load({
-              google: {
-                families: ["Lato:300, 400, 700", 'Anonymous Pro']
-              }
-            });
-          </script>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="node_modules/fullpage.js/dist/fullpage.css">
-    <link rel="stylesheet" href="css/generic-styles.css">
-    <link rel="stylesheet" href="css/styles.css">
+  <script src="node_modules/jquery/dist/jquery.js"></script>
+  <script src="node_modules/fullpage.js/vendors/scrolloverflow.js"></script>
+  <script src="node_modules/fullpage.js/dist/fullpage.js"></script>
+  <script src="node_modules/jquery-animated-headlines/dist/js/jquery.animatedheadline.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="node_modules/webfontloader/webfontloader.js"></script>
+  <script>
+    WebFont.load({
+      google: {
+        families: ["Lato:300, 400, 700", 'Anonymous Pro']
+      }
+    });
+  </script>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="node_modules/fullpage.js/dist/fullpage.css">
+  <link rel="stylesheet" href="node_modules/jquery-animated-headlines/dist/css/jquery.animatedheadline.css">
+  <link rel="stylesheet" href="css/generic-styles.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-    <div id="loader-wrapper">
-        <div id="loader"></div>
-        <div class="loader-section section-left"></div>
-        <div class="loader-section section-right"></div>
-    </div>
+  <div id="loader-wrapper">
+    <div id="loader"></div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+  </div>
 
-    <div id="content">
-        <div id="fullpage">
-            <div class="section" id="section-home">
-              <div class="fading-background"></div>
-              <canvas id="canvas"></canvas>
-              <div class="content">
-                <div id="logo">
-                  <img src="img/logo.svg" alt="logo Elena Trudini">
-                </div>
-                <!-- <h2>Curriculum &nbsp; Vitae</h2> -->
-              </div>
-            </div>
-            <div class="section" id="section-profilo">Some section 2222222</div>
-            <div class="section" id="section-esperienze">Some section 3333333</div>
-            <div class="section" id="section-portfolio">Some section 4444444</div>
-            <div class="section" id="section-contatti">Some section 5555555</div>
+  <div id="content">
+    <div id="fullpage">
+      <div class="section" id="section-home" data-tooltip="Home">
+        <div class="fading-background"></div>
+        <canvas id="canvas"></canvas>
+        <div class="content">
+          <div id="logo">
+            <img src="img/logo.svg" alt="logo Elena Trudini">
+          </div>
+          <div class="title-animation">
+            <h2 class="ah-headline">
+              <span class="ah-words-wrapper">
+                <b class="is-visible">Curriculum &nbsp; Vitae</b>
+                <b>Diario &nbsp; di &nbsp; Viaggio</b>
+              </span>
+            </h2>
+          </div>
         </div>
+      </div>
+      <div class="section" id="section-profilo" data-tooltip="Profilo">
+        <div class="biglietto">
+          <div class="biglietto-top"></div>
+          <div class="biglietto-content">
+              <div class="biglietto-left"></div>
+              <div class="biglietto-right"></div>
+            </div>
+          <div class="biglietto-bottom"></div>
+        </div>
+      </div>
+      <div class="section" id="section-esperienze" data-tooltip="Esperienze">Some section 3333333</div>
+      <div class="section" id="section-portfolio" data-tooltip="Portfolio">Some section 4444444</div>
+      <div class="section" id="section-contatti" data-tooltip="Contatti">Some section 5555555</div>
     </div>
-    <h1>ELENA TRUDINI - Front End Developer</h1>
+  </div>
+  <h1>ELENA TRUDINI - Front End Developer</h1>
 </body>
 
 </html>

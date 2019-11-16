@@ -36,3 +36,41 @@
     position: static;
     width: auto;
 }
+
+@font-face {
+    font-family: 'Athene';
+    src: url('Athene.eot');
+    src: url('Athene.eot?#iefix') format('embedded-opentype'),
+        url('Athene.woff2') format('woff2'),
+        url('Athene.woff') format('woff'),
+        url('Athene.ttf') format('truetype'),
+        url('Athene.svg#Athene') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@-webkit-keyframes spin {
+    0% {
+      -webkit-transform: rotate(0deg); /* Chrome, Opera 15+, Safari 3.1+ */
+      -ms-transform: rotate(0deg); /* IE 9 */
+      transform: rotate(0deg); /* Firefox 16+, IE 10+, Opera */
+    }
+    100% {
+      -webkit-transform: rotate(360deg); /* Chrome, Opera 15+, Safari 3.1+ */
+      -ms-transform: rotate(360deg); /* IE 9 */
+      transform: rotate(360deg); /* Firefox 16+, IE 10+, Opera */
+    }
+  }
+  
+  @keyframes spin {
+    0% {
+      -webkit-transform: rotate(0deg); /* Chrome, Opera 15+, Safari 3.1+ */
+      -ms-transform: rotate(0deg); /* IE 9 */
+      transform: rotate(0deg); /* Firefox 16+, IE 10+, Opera */
+    }
+    100% {
+      -webkit-transform: rotate(360deg); /* Chrome, Opera 15+, Safari 3.1+ */
+      -ms-transform: rotate(360deg); /* IE 9 */
+      transform: rotate(360deg); /* Firefox 16+, IE 10+, Opera */
+    }
+  }
