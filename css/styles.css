@@ -160,7 +160,7 @@ body:not(.loaded) .fading-background:before {
 /*
  * Bug fix per page scroll plugin
  */
-.content {
+.section-content {
   height: 100%;
   position: absolute;
   width: 100%;
@@ -210,3 +210,95 @@ h2 {
   top: 50%;
   width: 100%;
 }
+
+/*
+ * Profilo
+ */
+
+#section-profilo .section-content {
+   display: flex;
+   flex-direction: column;
+   align-content: center;
+ }
+
+ .biglietto {
+   width: 70%;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: auto;
+   margin-bottom: auto;
+  display: flex;
+  -webkit-transform: perspective(2000px) rotateX(45deg) rotateY(5deg) rotateZ(-15deg);
+ transform: perspective(2000px) rotateX(45deg) rotateY(5deg) rotateZ(-15deg);
+ transition: all 300ms linear;
+}
+
+ .biglietto:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  background-color: var(--orange);
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  transform: rotate(-15deg);
+  background-image: url("../img/oceanic.svg");
+  background-size: 14%;
+  background-repeat: repeat;
+}
+
+.biglietto:hover {
+  -webkit-transform: perspective(1000px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  transform: perspective(1000px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  transition: all 300ms linear;
+}
+ 
+ .biglietto-top-left, 
+ .biglietto-bottom-left,
+ .biglietto-top-right,
+ .biglietto-bottom-right {
+   background-color: var(--red);
+   color: white;
+   padding: 1rem;
+ }
+
+ .biglietto-top-left {
+   border-top-left-radius: 10px;
+ }
+ .biglietto-bottom-left {
+   display: flex;
+   align-items: center;
+   border-bottom-left-radius: 10px;
+ }
+ .biglietto-bottom-left img {
+   height: 30px;
+ }
+ .biglietto-content-left {
+   display: flex;
+   background-color: var(--beige)
+ }
+
+ .biglietto-content-left .img-container {
+   width: 20%;
+ }
+
+ .biglietto-content-left .passenger-data-container {
+   width: 80%;
+ }
+
+ .biglietto-top-right {
+   border-top-right-radius: 10px;
+ }
+
+ .biglietto-bottom-right {
+   border-bottom-right-radius: 10px;
+ }
+
+.img-container {
+   width: 200px;
+ }
+  .img-container img {
+   width: 100%;
+ }
