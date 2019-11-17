@@ -346,26 +346,13 @@ h1 {
   width: 100%;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*
+ * Portfolio
+ */
 
 .photostack {
-	position: relative;
 	overflow: hidden;
+	position: relative;
 }
 
 .js .photostack {
@@ -380,75 +367,73 @@ h1 {
 
 /* The size of this wrapper can be smaller if the items should not be scattered across the whole container */ 
 .photostack > div {
-	width: 100%;
 	height: 100%;
-	margin: 0 auto;
+	width: 70%;
+  margin: 0 auto;
 }
 
 .photostack figure {
-	width: 500px;
-	height: 300px;
-	position: relative;
 	display: inline-block;
-	background: #fff;
-	padding: 40px;
+	height: 301px;
+	position: relative;
 	text-align: center;
-	margin: 5px;
+	width: 501px;
+  box-shadow: 5px 5px 12px 1px rgba(0, 0, 0, 0.33);
+  margin: 5px;
 }
 
 .js .photostack figure {
-	position: absolute;
 	display: block;
 	margin: 0;
+	position: absolute;
 }
 
-.photostack figcaption h2 {
-	margin: 20px 0 0 0;
-	color: black;
+.photostack figcaption h3 {
+  display: none;
+  margin: 20px 0 0 0;
+}
+
+.photostack .photostack-current figcaption h3 {
+  color: var(--dark-brown);
+  display: block;
+  font-family: "Athene", sans-serif;
+  letter-spacing: 2px;
 }
 
 .photostack-img {
-	outline: none;
-	display: block;
-	width: 500px;
-	height: 300px;
 	background: #ddd;
+  height: 100%;
+  width: 100%;
 }
 
 .photostack-back {
 	display: none;
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 0;
 	left: 0;
-	background: #fff;
-	color: #a7a0a2;
-	padding: 50px 40px;
+	position: absolute;
 	text-align: left;
-	font-size: 22px;
-	line-height: 1.25;
+	top: 0;
 	z-index: 1;
+  height: 100%;
+  width: 100%;
 }
 
 .photostack-back p {
 	margin: 0;
 }
 
-.photostack-back p span {
-	text-decoration: line-through;
-}
-
 /* Navigation dots */
 .photostack nav {
-	position: absolute;
-	width: 100%;
 	bottom: 30px;
-	z-index: 90;
-	text-align: center;
 	left: 0;
-	-webkit-transition: opacity 0.3s;
-	transition: opacity 0.3s;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	z-index: 90;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
 }
 
 .photostack-start nav {
@@ -456,19 +441,19 @@ h1 {
 }
  
 .photostack nav span {
-	position: relative;
-	display: inline-block;
-	margin: 0 5px;
-	width: 30px;
-	height: 30px;
-	cursor: pointer;
-	background: #aaa;
+	background:var(--red);
 	border-radius: 50%;
-	text-align: center;
-	-webkit-transition: -webkit-transform 0.6s ease-in-out, background 0.3s;
+	cursor: pointer;
+	display: inline-block;
+	height: 30px;
+	margin: 0 5px;
+	position: relative;
+  text-align: center;
+  -webkit-transform: scale(0.48);
+  transform: scale(0.48);
+  -webkit-transition: -webkit-transform 0.6s ease-in-out, background 0.3s;
 	transition: transform 0.6s ease-in-out, background 0.3s;
-	-webkit-transform: scale(0.48);
-	transform: scale(0.48);
+	width: 30px;
 }
 
 .photostack nav span:last-child {
@@ -476,37 +461,29 @@ h1 {
 }
 
 .photostack nav span::after {
-	content: "\e600";
-	font-family: 'icons';
-	font-size: 80%;
-	speak: none;
-	display: inline-block;
-	vertical-align: top;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 30px;
-	color: #fff;
-	opacity: 0;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-transition: opacity 0.3s;
-	transition: opacity 0.3s;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
+	color: #fff;
+	content: "\021ba";
+	display: inline-block;
+	font-size: 1rem;
+	line-height: 30px;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+	vertical-align: top;
 }
 
 .photostack nav span.current {
-	background: #888;
+	background:var(--orange);
 	-webkit-transform: scale(1);
 	transform: scale(1);
 }
 
 .photostack nav span.current.flip {
+  background: var(--dark-brown);
 	-webkit-transform: scale(1) rotateY(-180deg) translateZ(-1px);
 	transform: scale(1) rotateY(-180deg) translateZ(-1px);
-	background: #555;
 }
 
 .photostack nav span.flippable::after {
@@ -515,26 +492,41 @@ h1 {
 	transition-delay: 0.4s;
 }
 
+#cartolina-prev i, #cartolina-succ i {
+  color: var(--red);
+  cursor: pointer;
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 20px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  transition: color 300ms ease-in-out;
+}
+
+#cartolina-prev i:hover, #cartolina-succ i:hover {
+  color: var(--orange);
+  transition: color 300ms ease-in-out;
+}
 /* Overlay on figure */
 .photostack figure::after {
+	background: rgba(47, 18, 10, 0.3);
 	content: '';
-	position: absolute;
-	width: 100%;
 	height: 100%;
-	top: 0;
 	left: 0;
-	visibility: visible;
 	opacity: 1;
-	background: rgba(0,0,0,0.05);
-	-webkit-transition: opacity 0.6s;
+	position: absolute;
+  top: 0;
+  -webkit-transition: opacity 0.6s;
 	transition: opacity 0.6s;
+	visibility: visible;
+	width: 100%;
 }
 
 /* Hide figure overlay when it becomes current */
 figure.photostack-current::after {
+  opacity: 0;
 	-webkit-transition: opacity 0.6s, visibility 0s 0.6s;
 	transition: opacity 0.6s, visibility 0s 0.6s;
-	opacity: 0;
 	visibility: hidden;
 }
 
@@ -567,9 +559,9 @@ figure.photostack-current::after {
 }
 
 .csstransformspreserve3d figure.photostack-flip .photostack-back {
+  display: block;
 	-webkit-transform: rotateY(180deg);
 	transform: rotateY(180deg);
-	display: block;
 }
 
 .no-csstransformspreserve3d figure.photostack-showback .photostack-back {

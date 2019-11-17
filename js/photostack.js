@@ -140,9 +140,20 @@
 		for( var i = 0; i < this.itemsCount; ++i ) {
 			inner += '<span></span>';
 		}
+		var prevArrow = document.createElement('div');
+		prevArrow.id = 'cartolina-prev';
+		prevArrow.setAttribute('data-tooltip', 'Vai alla cartolina precedente');
+		prevArrow.innerHTML = "<i>&#8592;</i>";
+		var nextArrow = document.createElement('div');
+		nextArrow.id = 'cartolina-succ';
+		nextArrow.setAttribute('data-tooltip', 'Vai alla cartolina successiva');
+		nextArrow.innerHTML = "<i>&#8594;</i>"
+		
 		this.nav.innerHTML = inner;
 		this.el.appendChild( this.nav );
 		this.navDots = [].slice.call( this.nav.children );
+		this.nav.prepend(prevArrow);
+		this.nav.appendChild(nextArrow);
 	}
 
 	Photostack.prototype._open = function( beforeStep ) {
