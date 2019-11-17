@@ -413,7 +413,7 @@ $(document).ready(function () {
                 lng: 7.6761
         };
         var options = {
-                zoom: 2,
+                zoom: 16,
                 center: center,
                 mapTypeId: google.maps.MapTypeId.ROADMAP,
                 disableDefaultUI: true,
@@ -427,6 +427,41 @@ $(document).ready(function () {
                 styles: style
         });
 
+        var markerBounds = new google.maps.LatLngBounds();
+
+        var coordinate = [
+                //[45.1566517, 6.8288132], //cv
+                [37.4219999,-122.0862462], //email
+                [45.0692421, 7.6662328], //telefono
+                [49,610431, 6,12437], //skype
+                [37,392684, -122,042034], //linkedin
+                [37,77759, -122,396727] //pinterest
+        ];
+
+        var icone = [
+                //'img/pdf.png',
+                'img/gmail.png',
+                'img/tim.png',
+                'img/skype.png',
+                'img/linkedin.png',
+                'img/pinterest.png'
+        ];
+
+        coordinate.forEach( (element, i) => {
+                var myLatlng = new google.maps.LatLng(element[0],element[1]);
+                markerBounds.extend(myLatlng);
+                var marker = new google.maps.Marker({
+                        position: myLatlng,
+                        title:"Hello World!",
+                        icon: icone[i],
+                        map: map
+                    });
+                    console.log('marker: ', marker);
+        });
+
+
+
+        map.fitBounds(markerBounds);
 
         // firma nella console.
         console.log(
@@ -439,6 +474,4 @@ $(document).ready(function () {
                 "padding:9px 10px; " +
                 "color: #C06E52; " +
                 "line-height: 25px;");
-
-
 });

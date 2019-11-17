@@ -202,6 +202,7 @@ h1 {
   transform-origin: 0 0;
   transform: rotate(270deg);
   width: 100vh;
+  backdrop-filter: blur(3px);
 }
 
 .title-animation h2 {
@@ -352,8 +353,8 @@ h1 {
  */
 
 .photostack {
-	overflow: hidden;
-	position: relative;
+  overflow: hidden;
+  position: relative;
 }
 
 .js .photostack {
@@ -361,32 +362,32 @@ h1 {
 }
 
 .photostack-start {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 /* Wrapper and figures */
 
-/* The size of this wrapper can be smaller if the items should not be scattered across the whole container */ 
+/* The size of this wrapper can be smaller if the items should not be scattered across the whole container */
 .photostack > div {
-	height: 100%;
-	width: 70%;
+  height: 100%;
+  width: 70%;
   margin: 0 auto;
 }
 
 .photostack figure {
-	display: inline-block;
-	height: 301px;
-	position: relative;
-	text-align: center;
-	width: 501px;
+  display: inline-block;
+  height: 301px;
+  position: relative;
+  text-align: center;
+  width: 501px;
   box-shadow: 5px 5px 12px 1px rgba(0, 0, 0, 0.33);
   margin: 5px;
 }
 
 .js .photostack figure {
-	display: block;
-	margin: 0;
-	position: absolute;
+  display: block;
+  margin: 0;
+  position: absolute;
 }
 
 .photostack figcaption h3 {
@@ -413,12 +414,12 @@ h1 {
   background-image: url(../img/postcard.jpg);
   background-size: cover;
   box-shadow: 5px 5px 12px 1px rgba(0, 0, 0, 0.33);
-	display: none;
-	left: 0;
-	position: absolute;
-	text-align: left;
-	top: 0;
-	z-index: 1;
+  display: none;
+  left: 0;
+  position: absolute;
+  text-align: left;
+  top: 0;
+  z-index: 1;
   height: 100%;
   width: 100%;
 }
@@ -432,12 +433,12 @@ h1 {
 
 /* Navigation dots */
 .photostack nav {
-	bottom: 30px;
-	left: 0;
-	position: absolute;
-	text-align: center;
-	width: 100%;
-	z-index: 90;
+  bottom: 30px;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  z-index: 90;
   align-items: center;
   display: flex;
   justify-content: center;
@@ -446,62 +447,63 @@ h1 {
 }
 
 .photostack-start nav {
-	opacity: 0;
+  opacity: 0;
 }
- 
+
 .photostack nav span {
-	background:var(--red);
-	border-radius: 50%;
-	cursor: pointer;
-	display: inline-block;
-	height: 30px;
-	margin: 0 5px;
-	position: relative;
+  background: var(--red);
+  border-radius: 50%;
+  cursor: pointer;
+  display: inline-block;
+  height: 30px;
+  margin: 0 5px;
+  position: relative;
   text-align: center;
   -webkit-transform: scale(0.48);
   transform: scale(0.48);
   -webkit-transition: -webkit-transform 0.6s ease-in-out, background 0.3s;
-	transition: transform 0.6s ease-in-out, background 0.3s;
-	width: 30px;
+  transition: transform 0.6s ease-in-out, background 0.3s;
+  width: 30px;
 }
 
 .photostack nav span:last-child {
-	margin-right: 0;
+  margin-right: 0;
 }
 
 .photostack nav span::after {
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
-	color: #fff;
-	content: "\021ba";
-	display: inline-block;
-	font-size: 1rem;
-	line-height: 30px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  color: #fff;
+  content: "\021ba";
+  display: inline-block;
+  font-size: 1rem;
+  line-height: 30px;
   opacity: 0;
   -webkit-transition: opacity 0.3s;
-	transition: opacity 0.3s;
-	vertical-align: top;
+  transition: opacity 0.3s;
+  vertical-align: top;
 }
 
 .photostack nav span.current {
-	background:var(--orange);
-	-webkit-transform: scale(1);
-	transform: scale(1);
+  background: var(--orange);
+  -webkit-transform: scale(1);
+  transform: scale(1);
 }
 
 .photostack nav span.current.flip {
   background: var(--dark-brown);
-	-webkit-transform: scale(1) rotateY(-180deg) translateZ(-1px);
-	transform: scale(1) rotateY(-180deg) translateZ(-1px);
+  -webkit-transform: scale(1) rotateY(-180deg) translateZ(-1px);
+  transform: scale(1) rotateY(-180deg) translateZ(-1px);
 }
 
 .photostack nav span.flippable::after {
-	opacity: 1;
-	-webkit-transition-delay: 0.4s;
-	transition-delay: 0.4s;
+  opacity: 1;
+  -webkit-transition-delay: 0.4s;
+  transition-delay: 0.4s;
 }
 
-#cartolina-prev i, #cartolina-succ i {
+#cartolina-prev i,
+#cartolina-succ i {
   color: var(--red);
   cursor: pointer;
   font-size: 2.5rem;
@@ -512,95 +514,96 @@ h1 {
   transition: color 300ms ease-in-out;
 }
 
-#cartolina-prev i:hover, #cartolina-succ i:hover {
+#cartolina-prev i:hover,
+#cartolina-succ i:hover {
   color: var(--orange);
   transition: color 300ms ease-in-out;
 }
 /* Overlay on figure */
 .photostack figure::after {
-	background: rgba(47, 18, 10, 0.3);
-	content: '';
-	height: 100%;
-	left: 0;
-	opacity: 1;
-	position: absolute;
+  background: rgba(47, 18, 10, 0.3);
+  content: "";
+  height: 100%;
+  left: 0;
+  opacity: 1;
+  position: absolute;
   top: 0;
   -webkit-transition: opacity 0.6s;
-	transition: opacity 0.6s;
-	visibility: visible;
-	width: 100%;
+  transition: opacity 0.6s;
+  visibility: visible;
+  width: 100%;
 }
 
 /* Hide figure overlay when it becomes current */
 figure.photostack-current::after {
   opacity: 0;
-	-webkit-transition: opacity 0.6s, visibility 0s 0.6s;
-	transition: opacity 0.6s, visibility 0s 0.6s;
-	visibility: hidden;
+  -webkit-transition: opacity 0.6s, visibility 0s 0.6s;
+  transition: opacity 0.6s, visibility 0s 0.6s;
+  visibility: hidden;
 }
 
 /* Special classes for transitions and perspective */
 .photostack-transition figure {
-	-webkit-transition: -webkit-transform 0.6s ease-in-out;
-	transition: transform 0.6s ease-in-out;
+  -webkit-transition: -webkit-transform 0.6s ease-in-out;
+  transition: transform 0.6s ease-in-out;
 }
 
 .photostack-perspective {
-	-webkit-perspective: 1800px;
-	perspective: 1800px;
+  -webkit-perspective: 1800px;
+  perspective: 1800px;
 }
 
 .photostack-perspective > div,
 .photostack-perspective figure {
-	-webkit-transform-style: preserve-3d;
-	transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
 }
 
 .photostack-perspective figure,
 .photostack-perspective figure div {
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .photostack-perspective figure.photostack-flip {
-	-webkit-transform-origin: 0% 50%;
-	transform-origin: 0% 50%;
+  -webkit-transform-origin: 0% 50%;
+  transform-origin: 0% 50%;
 }
 
 .csstransformspreserve3d figure.photostack-flip .photostack-back {
   display: block;
-	-webkit-transform: rotateY(180deg);
-	transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 .no-csstransformspreserve3d figure.photostack-showback .photostack-back {
-	display: block;
+  display: block;
 }
 
 /* The no-JS fallback look does not need to be boring ;) */
 .no-js .photostack figure {
-	box-shadow: -2px 2px 0 rgba(0,0,0,0.05);
+  box-shadow: -2px 2px 0 rgba(0, 0, 0, 0.05);
 }
 
 .no-js .photostack figure::after {
-	display: none;
+  display: none;
 }
 
 .no-js .photostack figure:nth-child(3n) {
-	-webkit-transform: translateX(-10%) rotate(5deg);
-	transform: translateX(-10%) rotate(5deg);
+  -webkit-transform: translateX(-10%) rotate(5deg);
+  transform: translateX(-10%) rotate(5deg);
 }
 
 .no-js .photostack figure:nth-child(3n-2) {
-	-webkit-transform: translateY(10%) rotate(-3deg);
-	transform: translateY(10%) rotate(-3deg);
+  -webkit-transform: translateY(10%) rotate(-3deg);
+  transform: translateY(10%) rotate(-3deg);
 }
 
 /*
  * Contatti
  */
 
- #map {
-   height: 100%;
-   width: 100%;
- }
+#map {
+  height: 100%;
+  width: 100%;
+}
