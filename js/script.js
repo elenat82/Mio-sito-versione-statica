@@ -158,7 +158,6 @@ $(document).ready(function () {
         function init() {
                 //initialize canvas/globals
                 canvas = document.getElementById("canvas"); //main (on-screen) canvas / context
-                console.log('canvas: ', canvas);
                 ctx = canvas.getContext("2d");
 
                 osCanvas = document.createElement("canvas"); //secondary (off-screen) canvas / context
@@ -173,7 +172,12 @@ $(document).ready(function () {
         window.onresize = onResize;
         window.requestAnimationFrame = requestAnimationFrame();
 
-        var ps = new Photostack(document.getElementById("photostack"), { callback: function (item) { } });
+        //photostack plugin
+
+        var ps = new Photostack(document.getElementById("photostack"), {
+                callback: function (item) { },
+                clickToFlip: true
+        });
         $("#cartolina-prec").click(function () {
                 ps.navigate("prev");
         });
@@ -181,4 +185,260 @@ $(document).ready(function () {
         $("#cartolina-succ").click(function () {
                 ps.navigate("next");
         });
+
+        //google map
+
+        var map;
+        var style = [
+                {
+                        "featureType": "all",
+                        "elementType": "geometry.fill",
+                        "stylers": [
+                                {
+                                        "color": "#e3dfd6"
+                                }
+                        ]
+                },
+                {
+                        "featureType": "all",
+                        "elementType": "geometry.stroke",
+                        "stylers": [
+                                {
+                                        "color": "#d3cdc3"
+                                }
+                        ]
+                },
+                {
+                        "featureType": "all",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                                {
+                                        "saturation": 36
+                                },
+                                {
+                                        "color": "#333333"
+                                },
+                                {
+                                        "lightness": 40
+                                }
+                        ]
+                },
+                {
+                        "featureType": "all",
+                        "elementType": "labels.text.stroke",
+                        "stylers": [
+                                {
+                                        "visibility": "on"
+                                },
+                                {
+                                        "color": "#ffffff"
+                                },
+                                {
+                                        "lightness": 16
+                                }
+                        ]
+                },
+                {
+                        "featureType": "all",
+                        "elementType": "labels.icon",
+                        "stylers": [
+                                {
+                                        "visibility": "off"
+                                }
+                        ]
+                },
+                {
+                        "featureType": "administrative",
+                        "elementType": "geometry.fill",
+                        "stylers": [
+                                {
+                                        "color": "#fefefe"
+                                },
+                                {
+                                        "lightness": 20
+                                }
+                        ]
+                },
+                {
+                        "featureType": "administrative",
+                        "elementType": "geometry.stroke",
+                        "stylers": [
+                                {
+                                        "color": "#fefefe"
+                                },
+                                {
+                                        "lightness": 17
+                                },
+                                {
+                                        "weight": 1.2
+                                }
+                        ]
+                },
+                {
+                        "featureType": "landscape",
+                        "elementType": "geometry.fill",
+                        "stylers": [
+                                {
+                                        "color": "#f3f1ee"
+                                }
+                        ]
+                },
+                {
+                        "featureType": "landscape.man_made",
+                        "elementType": "all",
+                        "stylers": [
+                                {
+                                        "visibility": "off"
+                                },
+                                {
+                                        "saturation": "0"
+                                }
+                        ]
+                },
+                {
+                        "featureType": "landscape.man_made",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                                {
+                                        "saturation": "0"
+                                }
+                        ]
+                },
+                {
+                        "featureType": "poi",
+                        "elementType": "geometry",
+                        "stylers": [
+                                {
+                                        "lightness": 21
+                                },
+                                {
+                                        "visibility": "off"
+                                },
+                                {
+                                        "color": "#f5f5f5"
+                                }
+                        ]
+                },
+                {
+                        "featureType": "poi.park",
+                        "elementType": "geometry",
+                        "stylers": [
+                                {
+                                        "color": "#dedede"
+                                },
+                                {
+                                        "lightness": 21
+                                }
+                        ]
+                },
+                {
+                        "featureType": "road.highway",
+                        "elementType": "geometry.fill",
+                        "stylers": [
+                                {
+                                        "color": "#ffffff"
+                                },
+                                {
+                                        "lightness": 17
+                                }
+                        ]
+                },
+                {
+                        "featureType": "road.highway",
+                        "elementType": "geometry.stroke",
+                        "stylers": [
+                                {
+                                        "color": "#ffffff"
+                                },
+                                {
+                                        "lightness": 29
+                                },
+                                {
+                                        "weight": 0.2
+                                }
+                        ]
+                },
+                {
+                        "featureType": "road.arterial",
+                        "elementType": "geometry",
+                        "stylers": [
+                                {
+                                        "color": "#ffffff"
+                                },
+                                {
+                                        "lightness": 18
+                                }
+                        ]
+                },
+                {
+                        "featureType": "road.local",
+                        "elementType": "geometry",
+                        "stylers": [
+                                {
+                                        "color": "#ffffff"
+                                },
+                                {
+                                        "lightness": 16
+                                }
+                        ]
+                },
+                {
+                        "featureType": "transit",
+                        "elementType": "geometry",
+                        "stylers": [
+                                {
+                                        "color": "#f2f2f2"
+                                },
+                                {
+                                        "lightness": 19
+                                }
+                        ]
+                },
+                {
+                        "featureType": "water",
+                        "elementType": "geometry",
+                        "stylers": [
+                                {
+                                        "color": "#e9e5de"
+                                },
+                                {
+                                        "lightness": 17
+                                }
+                        ]
+                }
+        ]
+
+        var center = {
+                lat: 45.0781,
+                lng: 7.6761
+        };
+        var options = {
+                zoom: 2,
+                center: center,
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                disableDefaultUI: true,
+                scrollwheel: false,
+                draggable: false,
+                disableDoubleClickZoom: true
+        };
+
+        map = new google.maps.Map($('#map')[0], options);
+        map.setOptions({
+                styles: style
+        });
+
+
+        // firma nella console.
+        console.log(
+                "%cQualcosa non va? Fammelo sapere!",
+                "padding:9px 10px; " +
+                "color: #7d2941; " +
+                "line-height: 25px;");
+        console.log(
+                "%cScrivimi a: e.trudini82@gmail.com",
+                "padding:9px 10px; " +
+                "color: #C06E52; " +
+                "line-height: 25px;");
+
+
 });

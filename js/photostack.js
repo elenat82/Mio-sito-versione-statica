@@ -1,13 +1,3 @@
-/**
- * photostack.js v1.0.0
- * http://www.codrops.com
- *
- * Licensed under the MIT license.
- * http://www.opensource.org/licenses/mit-license.php
- * 
- * Copyright 2014, Codrops
- * http://www.codrops.com
- */
 ;( function( window ) {
 
 	'use strict';
@@ -142,11 +132,11 @@
 		}
 		var prevArrow = document.createElement('div');
 		prevArrow.id = 'cartolina-prev';
-		prevArrow.setAttribute('data-tooltip', 'Vai alla cartolina precedente');
+		prevArrow.setAttribute('data-hint', 'Vai alla cartolina precedente');
 		prevArrow.innerHTML = "<i>&#8592;</i>";
 		var nextArrow = document.createElement('div');
 		nextArrow.id = 'cartolina-succ';
-		nextArrow.setAttribute('data-tooltip', 'Vai alla cartolina successiva');
+		nextArrow.setAttribute('data-hint', 'Vai alla cartolina successiva');
 		nextArrow.innerHTML = "<i>&#8594;</i>"
 		
 		this.nav.innerHTML = inner;
@@ -178,15 +168,14 @@
 	};
 
 	Photostack.prototype._initEvents = function() {
-		if(this.options.clickToFlip == 'true')
-		{
+		if(this.options.clickToFlip == true) {
 			this.items.forEach(function(img, idx){
 				img.addEventListener('click', function(event){
 					event.preventDefault();
 					if( idx === self.current ) {
 						self._rotateItem();
 					}
-				})
+				});
 			});
 		}
 		

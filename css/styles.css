@@ -219,7 +219,8 @@ h1 {
  * Profilo
  */
 
-#section-profilo .section-content {
+#section-profilo .section-content,
+#section-portfolio .section-content {
   align-content: center;
   background-image: url(../img/onde.svg);
   background-size: cover;
@@ -390,6 +391,7 @@ h1 {
 
 .photostack figcaption h3 {
   display: none;
+  font-size: 1.3rem;
   margin: 20px 0 0 0;
 }
 
@@ -401,12 +403,16 @@ h1 {
 }
 
 .photostack-img {
-	background: #ddd;
+  background: #ddd;
+  cursor: pointer;
   height: 100%;
   width: 100%;
 }
 
 .photostack-back {
+  background-image: url(../img/postcard.jpg);
+  background-size: cover;
+  box-shadow: 5px 5px 12px 1px rgba(0, 0, 0, 0.33);
 	display: none;
 	left: 0;
 	position: absolute;
@@ -417,8 +423,11 @@ h1 {
   width: 100%;
 }
 
-.photostack-back p {
-	margin: 0;
+.photostack-back div {
+  background-color: rgba(242, 239, 229, 0.65);
+  height: 100%;
+  padding: 1rem;
+  width: 100%;
 }
 
 /* Navigation dots */
@@ -586,3 +595,12 @@ figure.photostack-current::after {
 	-webkit-transform: translateY(10%) rotate(-3deg);
 	transform: translateY(10%) rotate(-3deg);
 }
+
+/*
+ * Contatti
+ */
+
+ #map {
+   height: 100%;
+   width: 100%;
+ }
