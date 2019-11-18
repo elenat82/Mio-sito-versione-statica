@@ -221,7 +221,8 @@ h1 {
  */
 
 #section-profilo .section-content,
-#section-portfolio .section-content {
+#section-portfolio .section-content,
+#section-contatti .section-content {
   align-content: center;
   background-image: url(../img/onde.svg);
   background-size: cover;
@@ -603,7 +604,8 @@ figure.photostack-current::after {
  * Contatti
  */
 
-#map {
-  height: 100%;
-  width: 100%;
+div.conv-form-wrapper {
+  position: relative;
+  width: 50%;
+  margin: auto;
 }
