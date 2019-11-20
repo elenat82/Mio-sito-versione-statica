@@ -237,21 +237,30 @@
       </div>
       <div class="section" id="section-contatti" data-tooltip="Contatti">
         <div class="section-content">
-          <div class="my-conv-form-wrapper">
-            <form name="contattiform">
-              <select name="domanda1" data-conv-question="Ciao! Ti è piaciuo il mio diaio di viaggio?">
-                <option value="si">Sì!</option>
-                <option value="no">No :(</option>
-              </select>
-              <div data-conv-fork="domanda1">
-                <div data-conv-case="si">
-                  <input type="text" data-conv-question="Mi fa piacere!" data-no-answer="true">
-                </div>
-                <div data-conv-case="no">
-                  <input type="text" data-conv-question="Mi dispiace...." data-no-answer="true">
-                </div>
+          <div class="device device-iphone-8 device-gold">
+            <div class="device-frame">
+              <div class="my-conv-form-wrapper device-content">
+                <form name="contattiform" action="javascript:void(0);">
+                  <select name="domanda1" data-conv-question="Ciao! Ti è piaciuo il mio diaio di viaggio?">
+                    <option value="si">Sì!</option>
+                    <option value="no">No :(</option>
+                  </select>
+                  <div data-conv-fork="domanda1">
+                    <div data-conv-case="si">
+                      <input type="text" data-conv-question="Mi fa piacere!" data-no-answer="true">
+                    </div>
+                    <div data-conv-case="no">
+                      <input type="text" data-conv-question="Mi dispiace...." data-no-answer="true">
+                    </div>
+                  </div>
+                </form>
               </div>
-            </form>
+            </div>
+            <div class="device-stripe"></div>
+            <div class="device-header"></div>
+            <div class="device-sensors"></div>
+            <div class="device-btns"></div>
+            <div class="device-power"></div>
           </div>
         </div>
       </div>
