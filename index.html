@@ -236,31 +236,89 @@
         </div>
       </div>
       <div class="section" id="section-contatti" data-tooltip="Contatti">
-        <div class="section-content">
-          <div class="device device-iphone-8 device-gold">
-            <div class="device-frame">
-              <div class="my-conv-form-wrapper device-content">
-                <form name="contattiform" action="javascript:void(0);">
-                  <select name="domanda1" data-conv-question="Ciao! Ti è piaciuo il mio diaio di viaggio?">
-                    <option value="si">Sì!</option>
-                    <option value="no">No :(</option>
-                  </select>
-                  <div data-conv-fork="domanda1">
-                    <div data-conv-case="si">
-                      <input type="text" data-conv-question="Mi fa piacere!" data-no-answer="true">
-                    </div>
-                    <div data-conv-case="no">
-                      <input type="text" data-conv-question="Mi dispiace...." data-no-answer="true">
-                    </div>
+        <div class="section-content hidden">
+          <div class="flex">
+            <div class="device-container w-66">
+              <div class="device device-iphone-8 device-gold">
+                <div class="device-frame">
+                  <div class="my-conv-form-wrapper device-content">
+                    <form name="contattiform" action="javascript:void(0);">
+                      <input type="text" name="domanda0" data-conv-question="Ciao! Come ti chiami?">
+                      <select name="domanda1"
+                        data-conv-question="Piacere di conoscerti, {domanda0}:0! Ti è piaciuto il mio viaggio?" data-callback="storeState">
+                        <option value="si1">Sì :)</option>
+                        <option value="no1">No :(</option>
+                      </select>
+                      <div data-conv-fork="domanda1">
+                        <div data-conv-case="si1">
+                          <input type="text" data-conv-question="Mi fa piacere!" data-no-answer="true">
+                          <select name="domanda2" data-conv-question="Vorresti scrivermi un'email?">
+                            <option value="si2">Sì, certo!</option>
+                            <option value="no2">No....</option>
+                          </select>
+                          <div data-conv-fork="domanda2">
+                            <div data-conv-case="si2">
+                              <input type="text" data-conv-question="Il mio indirizzo è e.trudini82@gmail.com"
+                                data-no-answer="true">
+                            </div>
+                            <div data-conv-case="no2">
+                              <select name="domanda3" data-conv-question="Forse preferisci telefonarmi?">
+                                <option value="si3">Ok!</option>
+                                <option value="no3">Neanche</option>
+                              </select>
+                              <div data-conv-fork="domanda3">
+                                <div data-conv-case="si3">
+                                  <input type="text" data-conv-question="Il mio numero di telefono è 366 167 2558"
+                                    data-no-answer="true">
+                                </div>
+                                <div data-conv-case="no3">
+                                  <select name="domanda4"
+                                    data-conv-question="Se preferisci Skype posso darti il mio contatto">
+                                    <option value="si4">Va bene!</option>
+                                    <option value="no4">Nemmeno</option>
+                                  </select>
+                                  <div data-conv-fork="domanda4">
+                                    <div data-conv-case="si4">
+                                      <input type="text" data-conv-question="Su Skype mi chiamo elenatrudini"
+                                        data-no-answer="true">
+                                    </div>
+                                    <div data-conv-case="no4">
+                                      <select name="domanda5"
+                                        data-conv-question="Ho anche un profilo Linkedin, vuoi visitarlo?">
+                                        <option value="si5">Certamente!</option>
+                                        <option value="no5">No per niente.....</option>
+                                      </select>
+                                      <div data-conv-fork="domanda5">
+                                          <div data-conv-case="si5"></div>
+                                          <div data-conv-case="no5"></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div data-conv-case="no1">
+                          <input type="text" data-conv-question="Mi dispiace...." data-no-answer="true">
+                        </div>
+                        <!-- aggiungere nel posto giusto data-callback="rollback" per tornare all'inizio -->
+                      </div>
+                    </form>
                   </div>
-                </form>
+                </div>
+                <div class="device-stripe"></div>
+                <div class="device-header"></div>
+                <div class="device-sensors"></div>
+                <div class="device-btns"></div>
+                <div class="device-power"></div>
               </div>
             </div>
-            <div class="device-stripe"></div>
-            <div class="device-header"></div>
-            <div class="device-sensors"></div>
-            <div class="device-btns"></div>
-            <div class="device-power"></div>
+            <div class="contacts-container w-33">
+              <ul>
+                <li><a href="files/curiculum.pdf" class="download">Download CV</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

@@ -9,13 +9,25 @@ $(document).ready(function () {
 
         //fullpage plugin
         $('#fullpage').fullpage({
-                licenseKey: null,
+                licenseKey: "98CCD753-00DD494A-9A2464B6-1E62E55A",
                 anchors: ["home", "profilo", "esperienze", "portfolio", "contatti"],
                 recordHistory: false,
                 navigation: true,
                 navigationPosition: "right",
                 showActiveTooltip: true,
-                verticalCentered: false
+                verticalCentered: false,
+                animateAnchor: true,
+                afterRender: function () {
+
+                },
+                afterLoad: function (origin, destination, direction) {
+                        if (destination.anchor == "contatti") {
+                                $('#section-contatti > div').removeClass('hidden');
+                        }
+                        else {
+                                $('#section-contatti > div').addClass('hidden');
+                        }
+                }
         });
 
         //canvas ray of lights
@@ -186,7 +198,47 @@ $(document).ready(function () {
                 ps.navigate("next");
         });
 
-        var convForm = $('.my-conv-form-wrapper').convform();
+        var rollbackTo = false;
+        var originalState = false;
+        function storeState(stateWrapper, ready) {
+                rollbackTo = stateWrapper.current;
+                console.log("storeState called: ", rollbackTo);
+                ready();
+        }
+        function rollback(stateWrapper, ready) {
+                console.log("rollback called: ", rollbackTo, originalState);
+                console.log("answers at the time of user input: ", stateWrapper.answers);
+                if (rollbackTo != false) {
+                        if (originalState == false) {
+                                originalState = stateWrapper.current.next;
+                                console.log('stored original state');
+                        }
+                        stateWrapper.current.next = rollbackTo;
+                        console.log('changed current.next to rollbackTo');
+                }
+                ready();
+        }
+
+        function restore(stateWrapper, ready) {
+                if (originalState != false) {
+                        stateWrapper.current.next = originalState;
+                        console.log('changed current.next to originalState');
+                }
+                ready();
+        }
+
+        var convForm = $('.my-conv-form-wrapper').convform({
+                typeInputUi: 'input',
+                selectInputStyle: 'disable',
+                selectInputDisabledText: 'Scegli una delle opzioni',
+                eventList: {
+                        onInputSubmit: function (convState, readyCallback) {
+                                console.log('convState: ', convState);
+
+                                readyCallback();
+                        }
+                }
+        });
 });
 
 // firma nella console.
