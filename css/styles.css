@@ -235,7 +235,7 @@ h1 {
 
 .biglietto:after {
   background-color: rgb(var(--orange));
-  background-image: url("../img/oceanic.svg");
+  background-image: url("../img/oceanic.svg"), url("https://www.transparenttextures.com/patterns/concrete-wall.png"), url("https://www.transparenttextures.com/patterns/lined-paper-2.png");
   background-repeat: repeat;
   background-size: 25%;
   border-radius: 10px;
@@ -289,9 +289,7 @@ h1 {
 
 .biglietto-center {
   background-color: var(--beige);
-  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
-  background-image: url("https://www.transparenttextures.com/patterns/lined-paper-2.png");
-  background-image: url("https://www.transparenttextures.com/patterns/white-paperboard.png");
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png"), url("https://www.transparenttextures.com/patterns/lined-paper-2.png");
   display: flex;
 }
 
@@ -317,7 +315,7 @@ h1 {
 }
 
 .biglietto-content-left .passenger-data-container .label {
-  color: rgb(var(--orange));
+  color: var(--red);
   font-weight: bold;
 }
 
@@ -808,7 +806,6 @@ div.conv-form-wrapper {
   line-height: 1rem;
   padding: 1rem;
   position: relative;
-  text-decoration: none;
   transition: all 0.2s ease;
 }
 .cta:before {
