@@ -131,7 +131,7 @@
 			inner += '<span></span>';
 		}
 		var prevArrow = document.createElement('div');
-		prevArrow.id = 'cartolina-prev';
+		prevArrow.id = 'cartolina-prec';
 		prevArrow.setAttribute('data-hint', 'Vai alla cartolina precedente');
 		prevArrow.innerHTML = "<i>&#8592;</i>";
 		var nextArrow = document.createElement('div');
@@ -373,9 +373,9 @@
 						};
 
 					if(self.items.indexOf(item) === self.current && self.started && iter === 0) {
-						self.currentItem.style.WebkitTransform = 'translate(' + self.centerItem.x + 'px,' + self.centerItem.y + 'px) rotate(0deg)';
-						self.currentItem.style.msTransform = 'translate(' + self.centerItem.x + 'px,' + self.centerItem.y + 'px) rotate(0deg)';
-						self.currentItem.style.transform = 'translate(' + self.centerItem.x + 'px,' + self.centerItem.y + 'px) rotate(0deg)';
+						self.currentItem.style.WebkitTransform = 'translate(' + self.centerItem.x + 'px,' + self.centerItem.y + 'px) rotate(0deg) translateZ(10px)';
+						self.currentItem.style.msTransform = 'translate(' + self.centerItem.x + 'px,' + self.centerItem.y + 'px) rotate(0deg) translateZ(10px)';
+						self.currentItem.style.transform = 'translate(' + self.centerItem.x + 'px,' + self.centerItem.y + 'px) rotate(0deg) translateZ(10px)';
 						// if there is something behind..
 						if( self.currentItem.querySelector( '.photostack-back' ) ) {
 							self._addItemPerspective();

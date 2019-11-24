@@ -6,6 +6,9 @@ $(document).ready(function () {
                         animationType: 'rotate-3'
                 });
         }, 3000);
+        setTimeout(function () {
+                $('.loaded #loader-wrapper').remove();
+        }, 4000);
 
         //fullpage plugin
         $('#fullpage').fullpage({
