@@ -56,14 +56,24 @@
               </span>
             </h2>
           </div>
+          <div class="scroll-hint">
+            <span>Scrolla con</span>
+            <p class="ah-headline">
+              <span class="ah-words-wrapper">
+                <b class="is-visible">il &nbsp; mouse</b>
+                <b>la &nbsp; tastiera</b>
+              </span>
+            </p>
+            <div class="scroll-arrow"></div>
+          </div>
         </div>
       </div>
       <div class="section" id="section-profilo" data-tooltip="Profilo">
         <div class="section-content">
           <div class="biglietto">
             <div class="biglietto-top">
-              <div class="w-66">Boarding Pass</div>
-              <div class="w-33">Boarding Pass</div>
+              <div class="w-66">**** Boarding Pass ****</div>
+              <div class="w-33">**** Boarding Pass ****</div>
             </div>
             <div class="biglietto-center w-100 h-100">
               <div class="biglietto-left w-66 h-100">
@@ -245,7 +255,8 @@
                     <form name="contattiform" action="javascript:void(0);">
                       <input type="text" name="domanda0" data-conv-question="Ciao! Come ti chiami?">
                       <select name="domanda1"
-                        data-conv-question="Piacere di conoscerti, {domanda0}:0! Ti è piaciuto il mio viaggio?" data-callback="storeState">
+                        data-conv-question="Piacere di conoscerti, {domanda0}:0! Ti è piaciuto il mio viaggio?"
+                        data-callback="storeState">
                         <option value="si1">Sì :)</option>
                         <option value="no1">No :(</option>
                       </select>
@@ -289,8 +300,8 @@
                                         <option value="no5">No per niente.....</option>
                                       </select>
                                       <div data-conv-fork="domanda5">
-                                          <div data-conv-case="si5"></div>
-                                          <div data-conv-case="no5"></div>
+                                        <div data-conv-case="si5"></div>
+                                        <div data-conv-case="no5"></div>
                                       </div>
                                     </div>
                                   </div>
@@ -327,7 +338,6 @@
         </div>
       </div>
     </div>
-  </div>
   </div>
   <h1>ELENA TRUDINI - Front End Developer</h1>
   <script src="js/jquery.convform.min.js"></script>

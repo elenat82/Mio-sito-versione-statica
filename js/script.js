@@ -5,6 +5,9 @@ $(document).ready(function () {
                 $('.title-animation').animatedHeadline({
                         animationType: 'rotate-3'
                 });
+                $('.scroll-hint').animatedHeadline({
+                        animationType: 'slide'
+                });
         }, 3000);
         setTimeout(function () {
                 $('.loaded #loader-wrapper').remove();
