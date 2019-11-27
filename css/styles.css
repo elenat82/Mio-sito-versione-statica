@@ -206,17 +206,19 @@ h1 {
   width: 100%;
 }
 
-.scroll-hint {
+#scroll-hint {
   bottom: 1rem;
   color: white;
+  cursor: pointer;
   position: absolute;
   right: 4rem;
   text-align: center;
   text-shadow: 1px 1px var(--dark-brown);
   text-transform: uppercase;
+  z-index: 3;
 }
 
-.scroll-hint .ah-headline .ah-words-wrapper {
+#scroll-hint .ah-headline .ah-words-wrapper {
   text-align: center;
 }
 
@@ -305,6 +307,11 @@ h1 {
   align-items: center;
   display: flex;
   padding: 1rem;
+}
+
+.biglietto-bottom .w-66 {
+  font-family: "Athene", sans-serif;
+  letter-spacing: 3px;
 }
 
 .biglietto-bottom .w-33 {

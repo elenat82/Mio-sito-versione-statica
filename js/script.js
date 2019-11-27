@@ -5,7 +5,7 @@ $(document).ready(function () {
                 $('.title-animation').animatedHeadline({
                         animationType: 'rotate-3'
                 });
-                $('.scroll-hint').animatedHeadline({
+                $('#scroll-hint').animatedHeadline({
                         animationType: 'slide'
                 });
         }, 3000);
@@ -35,6 +35,10 @@ $(document).ready(function () {
                         }
                 }
         });
+
+        $('#scroll-hint').on('click', function(e) {
+                $.fn.fullpage.moveSectionDown();
+        })
 
         //canvas ray of lights
         var canvas,
