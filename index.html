@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Elena Trudini | Front End Developer</title>
+  <title>Elena Trudini :: Front End Developer</title>
 
   <script src="node_modules/jquery/dist/jquery.js"></script>
   <script src="node_modules/fullpage.js/vendors/scrolloverflow.js"></script>
@@ -32,7 +32,7 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body>
+<body itemscope itemtype="http://schema.org/Person">
   <div id="loader-wrapper">
     <div id="loader"></div>
     <div class="loader-section section-left"></div>
@@ -79,7 +79,7 @@
               <div class="biglietto-left w-66 h-100">
                 <div class="biglietto-content-left w-100 h-100">
                   <div class="img-container">
-                    <img src="img/picture.png" alt="">
+                    <img src="img/picture.png" alt="" itemprop="image">
                   </div>
                   <div class="passenger-data-container">
                     <div>
@@ -88,15 +88,15 @@
                     </div>
                     <div>
                       <p class="label">Passenger date of birth</p>
-                      <p class="data">19 maggio 1982</p>
+                      <p class="data" itemprop="birthDate" content="1982/05/19">19 maggio 1982</p>
                     </div>
                     <div>
                       <p class="label">Passenger phone</p>
-                      <p class="data">+39 366 167 2558</p>
+                      <p class="data"><a href="tel:+393661672558"><span itemprop="telephone">+39 366 167 2558</span></a></p>
                     </div>
                     <div>
                       <p class="label">Passenger e-mail</p>
-                      <p class="data"><a href="mailto:e.trudini82@gmail.com">e.trudini82@gmail.com</a></p>
+                      <p class="data"><a href="mailto:e.trudini82@gmail.com"><span itemprop="email">e.trudini82@gmail.com</span></a></p>
                     </div>
                   </div>
                 </div>
@@ -290,7 +290,7 @@
                                   </select>
                                   <div data-conv-fork="domanda4">
                                     <div data-conv-case="si4">
-                                      <input type="text" data-conv-question="Su Skype mi chiamo elenatrudini"
+                                      <input type="text" data-conv-question="Su Skype mi chiamo elenatrudini82"
                                         data-no-answer="true">
                                     </div>
                                     <div data-conv-case="no4">
@@ -327,6 +327,10 @@
             </div>
             <div class="contacts-container w-33">
               <ul>
+                <li><a href="tel:+393661672558">+39 366 167 2558</a></li>
+                <li><a href="mailto:e.trudini82@gmail.com">e.trudini82@gmail.com</a></li>
+                <li><a href="skype:elenatrudini82?chat">elenatrudini82</a></li>
+                <li><a href="https://www.linkedin.com/in/elenatrudini/">https://www.linkedin.com/in/elenatrudini/</a></li>
                 <li class="download-btn">
                   <a href="files/curiculum.pdf" class="cta" target="_blank">
                     <span class="dwnl">Download&nbsp;CV</span>
@@ -339,7 +343,7 @@
       </div>
     </div>
   </div>
-  <h1>ELENA TRUDINI - Front End Developer</h1>
+  <h1><span itemprop="name">ELENA TRUDINI</span> :: <span itemprop="jobTitle">Front End Developer</span></h1>
   <script src="js/jquery.convform.min.js"></script>
 </body>
 
