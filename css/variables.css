@@ -8,8 +8,8 @@
         --font: 'Lato', sans-serif;
     }
   }
-  /* aggiungere il caso in cui non sia specificata la preferenza */
-  @media (prefers-color-scheme: light) {
+  
+  @media (prefers-color-scheme: light), (prefers-color-scheme: no-preference) {
     :root {
         --dark-brown: #2f120a;
         /* --orange: 241, 149, 74; */
