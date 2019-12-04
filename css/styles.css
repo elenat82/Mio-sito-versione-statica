@@ -382,6 +382,180 @@ h1 {
   border-left: dotted 2px #888888;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+div.timeline-container {
+  display: flex;
+  flex: auto;
+  flex-direction: column;
+  height: 100%;
+}
+
+div.item {
+  display: flex;
+  flex: auto;
+  padding: 0rem 1rem 0rem 1rem;
+  height: 100%;
+}
+
+#timeline {
+  position: relative;
+  display: table;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+#timeline > div {
+  overflow-y: scroll;
+    height: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+#timeline div:after {
+  content: '';
+  width: 2px;
+  position: absolute;
+  top: .5rem;
+  bottom: 0rem;
+  left: 60px;
+  z-index: 1;
+  background: #C5C5C5;
+}
+#timeline h3 {
+  position: sticky;
+  top: 5rem;
+  color: #888;
+  margin: 0;
+  font-size: 1em;
+  font-weight: 400;
+}
+#timeline .year {
+  position: relative;
+}
+#timeline :first-child .timeline-section {
+  margin-top: -1.3em;
+  padding-bottom: 0px;
+}
+#timeline .year .timeline-section {
+  position: relative;
+  padding-bottom: 1.25em;
+  margin-bottom: 2.2em;
+}
+#timeline .year .timeline-section h4 {
+  position: absolute;
+  bottom: 0;
+  font-size: .9em;
+  font-weight: 400;
+  line-height: 1.2em;
+  margin: 0;
+  padding: 0 0 0 89px;
+  color: #C5C5C5;
+}
+
+#timeline .year .timeline-section ul {
+  list-style-type: none;
+  padding: 0 0 0 75px;
+  margin: -1.35rem 0 1em;
+  max-width: 32rem;
+  font-size: 1em;
+}
+
+#timeline .year .timeline-section ul:last-child {
+  margin-bottom: 0;
+}
+#timeline .year .timeline-section ul:first-of-type:after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background: #C5C5C5;
+  border: 2px solid #FFFFFF;
+  border-radius: 50%;
+  position: absolute;
+  left: 54px;
+  top: 3px;
+  z-index: 2;
+}
+#timeline .year .timeline-section ul li {
+  margin-left: .5rem;
+}
+#timeline .year .timeline-section ul li:before {
+  content: '·';
+  margin-left: -.5rem;
+  padding-right: .3rem;
+}
+#timeline .year .timeline-section ul li:not(:first-child) {
+  margin-top: .5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
  * Portfolio
  */

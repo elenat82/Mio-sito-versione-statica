@@ -194,6 +194,34 @@ $(document).ready(function () {
         window.onresize = onResize;
         window.requestAnimationFrame = requestAnimationFrame();
 
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         //photostack plugin
 
         var ps = new Photostack(document.getElementById("photostack"), {
