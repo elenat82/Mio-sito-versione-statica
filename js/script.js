@@ -194,6 +194,17 @@ $(document).ready(function () {
         window.onresize = onResize;
         window.requestAnimationFrame = requestAnimationFrame();
 
+
+
+
+
+
+
+
+        $('#timeline-inner').jScrollPane({
+                //alwaysShowVScroll: true
+        });
+
         
 
 
