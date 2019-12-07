@@ -462,56 +462,51 @@ div.item {
   bottom: 0rem;
   left: 60px;
   z-index: 1;
-  background: #C5C5C5;
+  background: var(--red);
 }
 #timeline h3 {
   position: sticky;
-  top: 5rem;
+  top: 2.2rem;
   color: #888;
   margin: 0;
-  font-size: 1em;
-  font-weight: 400;
 }
 #timeline .year {
   position: relative;
+  padding-top: 1rem;
 }
 #timeline :first-child .timeline-section {
-  margin-top: -1.3em;
-  padding-bottom: 0px;
+  /* margin-top: -1.3em;
+  padding-bottom: 0px; */
 }
 #timeline .year .timeline-section {
   position: relative;
   padding-bottom: 1.25em;
   margin-bottom: 2.2em;
 }
-#timeline .year .timeline-section h4 {
-  position: absolute;
-  bottom: 0;
-  font-size: .9em;
-  font-weight: 400;
-  line-height: 1.2em;
-  margin: 0;
-  padding: 0 0 0 89px;
-  color: #C5C5C5;
+#timeline .year .timeline-section .month {
+  padding: 0 0 0 75px;
+  font-family: "Athene", sans-serif;
+  letter-spacing: 3px;
 }
 
 #timeline .year .timeline-section ul {
-  list-style-type: none;
-  padding: 0 0 0 75px;
-  margin: -1.35rem 0 1em;
-  max-width: 32rem;
-  font-size: 1em;
+  /* padding: 0 0 0 75px; */
+  /* max-width: 50%; */
 }
 
 #timeline .year .timeline-section ul:last-child {
-  margin-bottom: 0;
+  /* margin-bottom: 0; */
 }
-#timeline .year .timeline-section ul:first-of-type:after {
+#timeline .year .timeline-section .description,
+#timeline .year .timeline-section .hashtags {
+  padding: 0 0 0 75px;
+}
+#timeline .year .timeline-section .description:after {
   content: '';
   width: 10px;
   height: 10px;
-  background: #C5C5C5;
-  border: 2px solid #FFFFFF;
+  background: rgb(var(--orange));
+  border: 2px solid var(--beige);
   border-radius: 50%;
   position: absolute;
   left: 54px;
@@ -519,15 +514,26 @@ div.item {
   z-index: 2;
 }
 #timeline .year .timeline-section ul li {
-  margin-left: .5rem;
+  /* margin-left: .5rem; */
 }
 #timeline .year .timeline-section ul li:before {
-  content: '·';
+  /* content: '·';
   margin-left: -.5rem;
-  padding-right: .3rem;
+  padding-right: .3rem; */
 }
 #timeline .year .timeline-section ul li:not(:first-child) {
-  margin-top: .5rem;
+  /* margin-top: .5rem; */
+}
+.jspTrack {
+  border-right: solid 6.5px var(--beige);
+    border-left: solid 6.5px var(--beige);
+    background: #979ca1;
+}
+
+.jspDrag {
+	background: rgb(var(--orange));
+	left: -2.5px;
+	width: 9px;
 }
 
 
