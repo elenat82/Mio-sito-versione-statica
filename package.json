@@ -19,5 +19,8 @@
     "jquery-animated-headlines": "^1.0.0",
     "jscrollpane": "^2.2.1",
     "webfontloader": "^1.6.28"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.11.2"
   }
 }

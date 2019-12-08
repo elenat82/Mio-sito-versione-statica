@@ -36,7 +36,7 @@ $(document).ready(function () {
                 }
         });
 
-        $('#scroll-hint').on('click', function(e) {
+        $('#scroll-hint').on('click', function (e) {
                 $.fn.fullpage.moveSectionDown();
         })
 
@@ -205,7 +205,7 @@ $(document).ready(function () {
                 //alwaysShowVScroll: true
         });
 
-        
+
 
 
 
@@ -279,7 +279,6 @@ $(document).ready(function () {
         var convForm = $('.my-conv-form-wrapper').convform({
                 typeInputUi: 'input',
                 selectInputStyle: 'disable',
-                selectInputDisabledText: 'Scegli una delle opzioni',
                 eventList: {
                         onInputSubmit: function (convState, readyCallback) {
                                 console.log('convState: ', convState);
@@ -288,6 +287,21 @@ $(document).ready(function () {
                         }
                 }
         });
+
+        $('#reload-chat').on('click', function () {
+                convForm.destroy();
+                convForm = $('.my-conv-form-wrapper').convform({
+                        typeInputUi: 'input',
+                        selectInputStyle: 'disable',
+                        eventList: {
+                                onInputSubmit: function (convState, readyCallback) {
+                                        console.log('convState: ', convState);
+
+                                        readyCallback();
+                                }
+                        }
+                });
+        })
 });
 
 // firma nella console.

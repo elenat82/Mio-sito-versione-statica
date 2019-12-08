@@ -207,22 +207,24 @@ h1 {
 }
 
 #scroll-hint {
+  align-items: center;
   bottom: 1rem;
-  color: white;
+  color: #ffffff;
   cursor: pointer;
+  display: flex;
   position: absolute;
   right: 4rem;
   text-align: center;
   text-shadow: 1px 1px var(--dark-brown);
-  text-transform: uppercase;
   z-index: 3;
 }
 
 #scroll-hint .ah-headline .ah-words-wrapper {
+  font-size: 1.5rem;
   text-align: center;
 }
 
-.scroll-arrow {
+/* .scroll-arrow {
   border-bottom: solid 2px rgb(var(--orange));
   border-left: solid 2px rgb(var(--orange));
   height: 20px;
@@ -230,7 +232,7 @@ h1 {
   transform: rotate(-45deg);
   width: 20px;
 }
-
+ */
 /*
  * Profilo
  */
@@ -467,8 +469,13 @@ div.item {
 #timeline h3 {
   position: sticky;
   top: 2.2rem;
-  color: #888;
+  font-family: "Athene", sans-serif;
+  letter-spacing: 3px;
   margin: 0;
+  color: var(--red);
+  text-shadow: 1px 1px white;
+    font-weight: bold;
+    font-size: 1.2rem;
 }
 #timeline .year {
   position: relative;
@@ -485,8 +492,7 @@ div.item {
 }
 #timeline .year .timeline-section .month {
   padding: 0 0 0 75px;
-  font-family: "Athene", sans-serif;
-  letter-spacing: 3px;
+  text-transform: uppercase;
 }
 
 #timeline .year .timeline-section ul {
@@ -978,6 +984,12 @@ div.conv-form-wrapper {
   width: 3px;
 }
 
+#reload-chat {
+  padding-left: 1rem;
+  color: rgb(var(--orange));
+  cursor: pointer;
+}
+
 .device-iphone-8.device-gold .device-frame {
   box-shadow: inset 0 0 0 2px #e4b08a, inset 0 0 0 7px #f7e8dd, 5px 5px 12px 1px rgba(0, 0, 0, 0.33);;
 }
@@ -1019,6 +1031,8 @@ div.conv-form-wrapper {
   justify-content: flex-end;
   padding: 4rem;
 }
+
+
 
 .cta {
   color: var(--red);
