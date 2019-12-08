@@ -133,11 +133,11 @@
 		var prevArrow = document.createElement('div');
 		prevArrow.id = 'cartolina-prec';
 		prevArrow.setAttribute('data-hint', 'Vai alla cartolina precedente');
-		prevArrow.innerHTML = "<i>&#8592;</i>";
+		prevArrow.innerHTML = '<i class="fas fa-chevron-left"></i>';
 		var nextArrow = document.createElement('div');
 		nextArrow.id = 'cartolina-succ';
 		nextArrow.setAttribute('data-hint', 'Vai alla cartolina successiva');
-		nextArrow.innerHTML = "<i>&#8594;</i>"
+		nextArrow.innerHTML = '<i class="fas fa-chevron-right"></i>';
 		
 		this.nav.innerHTML = inner;
 		this.el.appendChild( this.nav );

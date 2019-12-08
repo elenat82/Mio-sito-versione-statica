@@ -695,14 +695,16 @@ div.item {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   color: #fff;
-  content: "\021ba";
+  content: "\f2ea";
   display: inline-block;
-  font-size: 1rem;
+  font-size: 0.8rem;
   line-height: 30px;
   opacity: 0;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
   vertical-align: top;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 600;
 }
 
 .photostack nav span.current {
@@ -727,18 +729,19 @@ div.item {
 #cartolina-succ i {
   color: var(--red);
   cursor: pointer;
-  font-size: 2.5rem;
-  font-weight: bold;
+  font-size: 1.5rem;
   line-height: 20px;
   padding-left: 1rem;
   padding-right: 1rem;
-  transition: color 300ms ease-in-out;
+  text-shadow: 1px 1px transparent;
+  transition: all 300ms ease-in-out;
 }
 
 #cartolina-prec i:hover,
 #cartolina-succ i:hover {
   color: rgb(var(--orange));
-  transition: color 300ms ease-in-out;
+  text-shadow: 1px 1px var(--dark-brown);
+  transition: all 300ms ease-in-out;
 }
 /* Overlay on figure */
 .photostack figure::after {
