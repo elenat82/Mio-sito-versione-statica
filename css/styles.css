@@ -206,33 +206,6 @@ h1 {
   width: 100%;
 }
 
-#scroll-hint {
-  align-items: center;
-  bottom: 1rem;
-  color: #ffffff;
-  cursor: pointer;
-  display: flex;
-  position: absolute;
-  right: 4rem;
-  text-align: center;
-  text-shadow: 1px 1px var(--dark-brown);
-  z-index: 3;
-}
-
-#scroll-hint .ah-headline .ah-words-wrapper {
-  font-size: 1.5rem;
-  text-align: center;
-}
-
-/* .scroll-arrow {
-  border-bottom: solid 2px rgb(var(--orange));
-  border-left: solid 2px rgb(var(--orange));
-  height: 20px;
-  margin: auto;
-  transform: rotate(-45deg);
-  width: 20px;
-}
- */
 /*
  * Profilo
  */
@@ -247,7 +220,7 @@ h1 {
   flex-direction: column;
 }
 
-.biglietto {
+#biglietto {
   border-radius: 10px;
   box-shadow: 6px 6px 21px 1px rgba(0, 0, 0, 0.64);
   margin-bottom: auto;
@@ -260,7 +233,7 @@ h1 {
   width: 70%;
 }
 
-.biglietto:after {
+#biglietto:after {
   background-color: rgb(var(--orange));
   background-image: url("../img/oceanic.svg"), url("../img/concrete-wall.png"), url("../img/lined-paper-2.png");
   background-repeat: repeat;
@@ -278,7 +251,7 @@ h1 {
   z-index: -1;
 }
 
-.biglietto:hover {
+#biglietto.hover {
   -webkit-transform: perspective(1000px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
   transform: perspective(1000px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
   transition: all 300ms linear;
@@ -1035,7 +1008,9 @@ div.conv-form-wrapper {
   padding: 4rem;
 }
 
-
+.download-btn {
+  margin-top: 2rem;
+}
 
 .cta {
   color: var(--red);
@@ -1060,30 +1035,21 @@ div.conv-form-wrapper {
   transition: all 0.3s ease;
   width: 58px;
 }
-.cta:after {
-  bottom: 0;
-  content: '\2192';
-  font-size: 2rem;
-  font-weight: bold;
-  left: 80%;
-  position: absolute;
-  transition: all 0.3s ease;
-}
+
 .cta span {
   display: inline-block;
   position: relative;
   text-transform: uppercase;
 }
+.cta:hover {
+  color: var(--beige);
+  transition: all 0.2s ease;
+}
 .cta:hover:before {
   background: rgb(var(--orange));
-  width: 120%;
+  width: 100%;
 }
 
-.cta:hover:after{
-  bottom: 45%;
-  color: var(--beige);
-  left: 100%;
-}
 .cta:active {
   transform: scale(0.96);
 }

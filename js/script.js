@@ -5,9 +5,6 @@ $(document).ready(function () {
                 $('.title-animation').animatedHeadline({
                         animationType: 'rotate-3'
                 });
-                $('#scroll-hint').animatedHeadline({
-                        animationType: 'slide'
-                });
         }, 3000);
         setTimeout(function () {
                 $('.loaded #loader-wrapper').remove();
@@ -20,7 +17,7 @@ $(document).ready(function () {
                 recordHistory: false,
                 navigation: true,
                 navigationPosition: "right",
-                showActiveTooltip: true,
+                showActiveTooltip: false,
                 verticalCentered: false,
                 animateAnchor: true,
                 afterRender: function () {
@@ -33,12 +30,14 @@ $(document).ready(function () {
                         else {
                                 $('#section-contatti > div').addClass('hidden');
                         }
+                },
+                onLeave: function(origin, destination, direction) {
+                        if (origin.anchor == "profilo") {
+                                $("#biglietto").removeClass('hover');
+                        }
+
                 }
         });
-
-        $('#scroll-hint').on('click', function (e) {
-                $.fn.fullpage.moveSectionDown();
-        })
 
         //canvas ray of lights
         var canvas,
@@ -194,44 +193,11 @@ $(document).ready(function () {
         window.onresize = onResize;
         window.requestAnimationFrame = requestAnimationFrame();
 
-
-
-
-
-
-
-
-        $('#timeline-inner').jScrollPane({
-                //alwaysShowVScroll: true
+        $("#biglietto").on('mouseenter', function() {
+                $(this).addClass('hover');
         });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        
+        $('#timeline-inner').jScrollPane();
 
         //photostack plugin
 

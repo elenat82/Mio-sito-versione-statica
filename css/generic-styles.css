@@ -1,8 +1,8 @@
 @font-face {
   font-family: "Athene";
-  src: url("Athene.eot");
-  src: url("Athene.eot?#iefix") format("embedded-opentype"), url("Athene.woff2") format("woff2"),
-    url("Athene.woff") format("woff"), url("Athene.ttf") format("truetype"), url("Athene.svg#Athene") format("svg");
+  src: url("fonts/Athene.eot");
+  src: url("fonts/Athene.eot?#iefix") format("embedded-opentype"), url("fonts/Athene.woff2") format("woff2"),
+    url("fonts/Athene.woff") format("woff"), url("fonts/Athene.ttf") format("truetype"), url("fonts/Athene.svg#Athene") format("svg");
   font-weight: normal;
   font-style: normal;
 }
