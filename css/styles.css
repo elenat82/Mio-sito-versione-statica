@@ -784,8 +784,8 @@ figure.photostack-current::after {
 
 .photostack-perspective figure,
 .photostack-perspective figure div {
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+  /* -webkit-backface-visibility: hidden;
+  backface-visibility: hidden; */
 }
 
 .photostack-perspective figure.photostack-flip {
