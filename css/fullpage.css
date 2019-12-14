@@ -183,10 +183,7 @@
  
  #fp-nav ul li a.active span {
    width: 100%;
-   margin: -6px 0 0 -6px;
    background: rgb(var(--orange));
-   /* border-top-left-radius: 5px; */
-   /* border-bottom-left-radius: 5px; */
  }
  #fp-nav ul li:hover a span {
    width: 10px;

@@ -618,11 +618,37 @@ div.item {
   width: 100%;
 }
 
-.photostack-back div {
-  background-color: rgba(242, 239, 229, 0.65);
+.photostack-back article {
+  background-color: rgba(242, 239, 229, 0.8);
   height: 100%;
-  padding: 1rem;
+  padding: 2rem;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.photostack-back .descrizione {
+  line-height: 1.4rem;
+  padding-bottom: 1rem;
+}
+
+.photostack-back .technologies ul {
+  display: flex;
+}
+
+.photostack-back .technologies ul li {
+  margin-right: 1rem;
+  font-size: 1.6rem;
+  color: var(--red);
+}
+
+.photostack-back .links {
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+}
+.photostack-back .links a {
+  color: rgb(var(--orange))
 }
 
 /* Navigation dots */
@@ -964,6 +990,8 @@ div.conv-form-wrapper {
   padding-left: 1rem;
   color: rgb(var(--orange));
   cursor: pointer;
+  width: 130px;
+  display: flex;
 }
 
 .device-iphone-8.device-gold .device-frame {
@@ -1008,6 +1036,26 @@ div.conv-form-wrapper {
   padding: 4rem;
 }
 
+.contacts-container li {
+  padding-bottom: 2rem;
+}
+
+.contacts-container li a {
+  color: var(--dark-brown);
+}
+
+.contacts-container li i {
+  background-color: var(--red);
+  border-radius: 50%;
+  padding: 0.5rem;
+  color: var(--beige);
+}
+
+.contacts-container li:hover i {
+  background-color: rgb(var(--orange));
+  transition: all 300ms ease-in-out;
+}
+
 .download-btn {
   margin-top: 2rem;
 }
@@ -1036,7 +1084,7 @@ div.conv-form-wrapper {
   width: 58px;
 }
 
-.cta span {
+.cta span, .cta i {
   display: inline-block;
   position: relative;
   text-transform: uppercase;
