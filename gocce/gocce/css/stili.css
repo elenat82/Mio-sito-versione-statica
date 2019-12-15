@@ -1,0 +1,311 @@
+@charset "utf-8";
+/* -------------------------------- COLORI
+giallo    #fcee21;
+*/
+@font-face {
+    font-family: 'flex_displaythin';
+    src: url('font/flexdisplay-thin-webfont.eot');
+    src: url('font/flexdisplay-thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/flexdisplay-thin-webfont.woff2') format('woff2'),
+         url('font/flexdisplay-thin-webfont.woff') format('woff'),
+         url('font/flexdisplay-thin-webfont.ttf') format('truetype'),
+         url('font/flexdisplay-thin-webfont.svg#flex_displaythin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+	background-image: url(../immagini/sfondo-gocce.png);
+	width:90%;
+	margin:auto;
+}
+/* ---------------------------------------- HEADER ---------------------------------------------- */
+header {
+	margin-top:2%;
+	height: 250px;
+}
+
+#carrello {
+	height: 50px;
+	border-bottom-color: #fcee21;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+#carrello a {
+	font-family: 'arial';
+	color: #fcee21;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#carrello p {
+	float: left;
+}
+
+#carrello img {
+	float: right;
+}
+#header-top {
+	margin-bottom: 0.5%;
+	height: 30px;
+	padding-top: 2%;
+	background-color: rgba(255,255,255,0.5);
+	clear: both;
+	padding-left:1%;
+	padding-bottom: 1%;
+}
+#header-top ul {
+	height: 80px;
+	width: 50%;
+	float: right;
+}
+
+#header-top li {
+	float: right;
+	font-family: 'arial';
+	margin-right: 5%;
+	margin-left: 5%;
+	height: 50px;
+	width: 10%;
+	list-style-type: none;	
+}
+
+#header-top li a {
+	text-decoration: none;
+	color: inherit;
+	height: 50px;
+	
+}
+
+#header-top li a:hover {
+	color: #fcee21;
+	font-weight: bold;
+	
+	
+}
+
+
+.loggato {
+	margin-bottom: 1%;
+	font-family: 'arial';
+	width:40%;
+	float:left;
+}
+
+.loggato strong {
+	color: #949494;
+	font-weight: bold;
+}
+#header-top img {
+	margin-top: -7px;
+}
+
+#header-bottom {
+	height: 140px; 
+	padding-top: 1%;
+	margin-top: 30px;
+}
+#logo {
+	float: left;
+	width: 29%;
+	position: relative;
+	margin-top: -40px;
+}
+nav {
+	float: left;
+	width: 70%;
+	position: absolute;
+	/*top: 16%;*/
+	left: 30%;
+	border-left-color: #000;
+	border-left-style: solid;
+	border-left-width: thin;
+	padding-left: 5%;
+}
+nav p {
+	font-family: 'flex_displaythin';
+	width: 34%;
+	float: left;
+	font-size: 50px;
+	position: relative;
+}
+.primolink a{
+	float: left;
+	width: 33%;
+	background-image: url(../immagini/altre-immagini/vini.jpg);
+	height: 120px;
+	background-repeat: no-repeat;
+	text-indent: -9999px;
+}
+.secondolink a{
+	float: left;
+	width: 33%;
+	background-image: url(../immagini/altre-immagini/birre.jpg);
+	height: 120px;
+	background-repeat: no-repeat;
+	text-indent: -9999px;
+}
+.primolink a:hover {
+	background-image: url(../immagini/altre-immagini/vini-hover.png);
+	background-position: left;
+}
+.secondolink a:hover {
+	background-image: url(../immagini/altre-immagini/birre-hover.png);
+	background-position: left;
+}
+
+#banner {
+	text-align: center;
+	clear: both;
+	margin-bottom: 2%;
+}
+
+
+
+
+/* -----------------------------------------------PARTE CENTRALE HOME PAGE ------------------------*/
+
+#pageContent h2 {
+font-family: 'flex_displaythin';
+font-size: 30px;
+border-bottom-width: 1px;
+border-bottom-style: solid;
+border-bottom-color: #fcee21;
+padding-bottom: 0.5%;
+}
+
+#pageContent h2:nth-of-type(2) {
+	clear: both;
+}
+
+.prodotto {
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #fcee21;
+	padding: 0.5%;
+	float: left;
+	margin: 0.5%;
+	width: 18%;
+}
+
+.prodotto h3 {
+	font-family: 'arial';
+	color: #949494;
+	font-weight: bold;
+	font-size: 1.1em;
+	text-align: center;
+	margin-bottom: 0.5%;
+	height: 60px;
+}
+
+.prodotto h3 a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.prodotto img {
+display: block;
+margin: 0 auto 0 auto;
+}
+
+.prodotto p {
+	text-align: center;
+	margin-top: 5%;
+	font-family: 'arial';
+color: #949494;
+font-weight: bold;
+font-size: 1.1em;
+}
+
+
+/* ----------------------------------------------------- PAGINATORE ------------------------ */
+
+.prec {
+	float: left;
+	clear: both;
+}
+
+.succ {
+float: right;
+clear: both;
+
+}
+/* --------------------------------------------------- FOOTER ------------------------------ */
+
+footer {
+	margin-top: 2%;
+	clear:both;
+}
+#social {
+	border-top-color: #cccccc;
+	border-top-style: solid;
+	border-top-width: 2px;
+	height:30px;
+	padding: 1%;
+}
+
+#follow {
+	width: 50%;
+	float: left;
+}
+#follow p {
+	float: left;
+	font-family: 'arial';
+	margin-right: 2%;
+	margin-top: 1.5%;
+}
+}
+#follow a {
+	float: left;
+}
+#newsletter {
+	width: 50%;
+	float: left;
+}
+#newsletter p {
+	float: left;
+	font-family: 'arial';
+	margin-right: 2%;
+	margin-top: 1.5%;
+}
+#newsletter input {
+	float: left;
+	margin-left: 2%;
+	margin-top: 1.1%;
+}
+.footer {
+	border-top-color: #cccccc;
+	border-top-style: solid;
+	border-top-width: 2px;
+	float: left;
+	padding: 1%;
+	font-family: 'arial';
+	width: 23%;
+}
+
+
+
+
+#owl-demo .item{
+  background: #3fbf79;
+  padding: 30px 0px;
+  margin: 10px;
+  color: #FFF;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  text-align: center;
+}
+.customNavigation{
+  text-align: center;
+}
+//use styles below to disable ugly selection
+.customNavigation a{
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+ 

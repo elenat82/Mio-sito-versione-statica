@@ -1,0 +1,167 @@
+#pagina-carrello {
+	clear: both;
+	font-family: 'arial';
+}
+
+#pagina-carrello h2 {
+	font-family: 'arial';
+	font-size: 20px;
+	color: #fcee21;
+	font-weight: bold;
+	clear: both;
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+th {
+	width: 150px;
+	text-align: left;
+	color: #949494;
+	font-weight: bold;
+}
+
+table, th, td {
+   border: 1px solid #cccccc;
+}
+
+td, th {
+    padding-top: 15px;
+    
+    padding-left: 15px;
+ 
+}
+
+td {
+	padding-right: 15px;
+	width: 160px;
+}
+
+#pagina-quantita h2 {
+	clear: both;
+	margin-top: 5%;
+	font-family: 'arial';
+	font-weight: bold;
+	color: #fcee21;
+	margin-bottom: 5%;
+}
+
+.car th {
+	background-color: rgba(255,255,255,0.5);
+	padding-bottom: 1%;
+	font-family: 'arial';
+}
+
+.car td {
+	font-family: 'arial';
+}
+
+.car input  {
+	margin-left: 2.5%;
+}
+
+small {
+	font-family: 'arial';
+	margin-top: 2%;
+	display: block;
+	text-align: center;
+	font-style: italic;
+}
+
+
+#riepcar {
+	clear: both;
+	font-family: 'arial';
+	margin-top: 5%;
+	color: #fcee21;
+	font-weight: bold;
+	margin-bottom: 3%;
+}
+
+#tabcar tr:nth-of-type(2n) {
+background-color: rgba(255,255,255,0.5);
+}
+
+#tabcar td {
+	padding-bottom: 1%;
+}
+
+#tabcar {
+	font-family: 'arial';
+	clear: both;
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+
+#tot {
+	float: right;
+	font-family: 'arial';
+	padding-right: 1%;
+	border-right-color: yellow;
+    border-right-style: solid;
+    border-right-width: thin;
+
+}
+
+#tot strong {
+	font-weight: bold;
+}
+
+#tot p {
+	clear: both;
+	float: right;
+	margin-bottom: 3%;
+}
+
+.riepilogo-carrello form {
+	clear: both;
+	float: right;
+	margin-top: 3%;
+	margin-bottom: 3%;
+}
+
+.alert {
+
+clear: both;
+	width: 30%;
+	padding-left: 40px;
+	font-family: 'arial';
+	background-color: yellow;
+}
+    
+#nuovo {
+	clear: both;
+	margin-top: 5%;
+	font-family: 'arial';
+}
+
+#nuovo label {
+	display: inline-block;
+	width: 100px;
+	margin-bottom: 2%;
+
+}
+
+
+#nuovo input {
+	margin-right: 10px;
+	margin-bottom: 2%;
+}
+
+#nuovo input[value='Conferma modifiche'] {
+	margin-left: 105px;
+}
+
+input[value='Effettua il pagamento'] {
+	border-width: 20px;
+	border-style: solid;
+	border-radius: 20px;
+	padding: 20px;
+	font-size: 1.2em;
+	font-weight: bold;
+	background-color: #ffffff;
+	color: #949494;
+}
+
+#paga {
+	text-align: center;
+	margin-top: 5%;
+}

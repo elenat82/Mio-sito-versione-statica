@@ -1,0 +1,87 @@
+/* -------------------------- PAGINA PROFILO ----------*/
+
+
+.info {
+	font-family: 'arial';
+}
+
+.info a {
+	text-decoration: none;
+	color: #949494;
+	font-weight: bold;
+	
+}
+
+.info a:hover {
+	color: #fcee21;
+}
+
+
+.info p {
+	margin-top: 10px;
+}
+
+.profilo h2 {
+	font-family: 'arial';
+	font-size: 20px;
+	color: #fcee21;
+	font-weight: bold;
+	clear: both;
+	margin-top: 5%;
+}
+
+
+th {
+	width: 200px;
+	text-align: left;
+	color: #949494;
+	font-weight: bold;
+}
+
+table, th, td {
+   border: 1px solid #cccccc;
+}
+
+td, th {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+}
+
+.alt {
+	background-color: rgba(255,255,255,0.5);
+}
+
+
+/* --------------------- PAGINA MODIFICA -------------------*/
+
+
+label {
+	width: 200px;
+	text-align: left;
+	color: #949494;
+	font-weight: bold;
+	margin-bottom: 10px;
+	display: block;
+}
+
+
+
+.info input {
+
+	width: 300px;
+	margin-bottom: 10px;
+}
+
+.info input:last-of-type {
+	width: 150px;
+	text-align: center;
+}
+
+.modifica-profilo h2 {
+	clear: both;
+	font-family: 'arial';
+	padding-top: 2%;
+}

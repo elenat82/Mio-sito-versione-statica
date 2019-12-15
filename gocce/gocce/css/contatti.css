@@ -1,0 +1,38 @@
+#contatti {
+	clear: both;
+	padding-top: 5%;
+	font-family: 'arial';
+}
+
+#contatti h2 {
+	color: #fcee21;
+	font-weight: bold;
+	font-size: 1.5em;
+}
+
+#contatti label {
+	display: block;
+	width: 200px;
+	color: #949494;
+	font-weight: bold;
+}
+
+#contatti input {
+	width: 200px;
+	margin-bottom: 15px;
+}
+
+#contatti textarea {
+	width: 450px;
+	height: 250px;
+	margin-bottom: 15px;
+}
+
+#mappa {
+	float: right;
+	padding-top: 5%;
+}
+
+#contatti {
+	float: left;
+}

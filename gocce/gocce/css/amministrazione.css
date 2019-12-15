@@ -1,0 +1,113 @@
+body {
+	background-image: url(../immagini/sfondo-gocce.png);
+	width:90%;
+	margin:auto;
+	font-family: 'arial';
+}
+.amministrazione #logo {
+	text-align: center;
+	margin-top: 1%;
+}
+
+.modifica-prodotto #logo {
+	text-align: center;
+	margin-top: 1%;
+}
+
+#dashboard {
+	clear: both;
+	margin-top: 2%;
+}
+
+#riassunto-prodotti {
+	float: left;
+	width: 47%;
+	padding: 2%;
+}
+
+td {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+}
+
+#riassunto-clienti {
+	float: left;
+	width: 45%;
+	padding: 2%;
+}
+
+h3 {
+	font-size: 20px;
+	color: #fcee21;
+	font-weight: bold;
+}
+
+.modifica-prodotto h2 {
+	color: #fcee21;
+	font-weight: bold;
+}
+
+
+.modifica-prodotto label {
+	display: block;
+	width: 150px;
+	margin-bottom: 1%;
+	color: #949494;
+	font-weight: bold;
+}
+
+.modifica-prodotto input {
+	width: 200px;
+	margin-bottom: 1%;
+}
+
+.modifica-prodotto input[type='file'] {
+	width: 250px;
+}
+
+.modifica-prodotto textarea {
+	width: 200px;
+}
+
+input[required] {
+	border-color: red;
+	border-width: thin;
+	border-style: dotted;
+}
+
+.inserisci-prodotto h2 {
+	color: #fcee21;
+	font-weight: bold;
+	margin-top: 5%;
+	font-size: 20px;
+}
+
+.inserisci-prodotto label {
+	display: inline-block;
+	width: 200px;
+	margin-bottom: 2%;
+}
+
+.inserisci-prodotto input {
+	width: 200px;
+	margin-bottom: 2%;
+}
+
+.inserisci-prodotto textarea[name='descrizione_lunga'] {
+	width: 300px;
+	height: 150px;
+	margin-bottom: 2%;
+}
+
+
+.inserisci-prodotto textarea[name='descrizione_breve'] {
+	width: 300px;
+	height: 50px;
+	margin-bottom: 2%;
+}
+.inserisci-prodotto input[type='file'] {
+	width: 300px;
+}
