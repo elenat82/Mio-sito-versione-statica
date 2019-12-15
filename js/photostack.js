@@ -487,6 +487,11 @@
 				if( support.preserve3d ) {
 					this.currentItem.style.WebkitTransform = 'translate(' + this.centerItem.x + 'px,' + this.centerItem.y + 'px) rotateY(0deg)';
 					this.currentItem.style.transform = 'translate(' + this.centerItem.x + 'px,' + this.centerItem.y + 'px) rotateY(0deg)';
+					let h3 = this.currentItem.querySelector('h3');
+					let time = setTimeout(function() {
+						classie.removeClass(h3, 'hidden');
+					}, 1000);
+					//clearTimeout(time);
 				}
 				else {
 					classie.removeClass( this.currentItem, 'photostack-showback' );
@@ -499,6 +504,8 @@
 				if( support.preserve3d ) {
 					this.currentItem.style.WebkitTransform = 'translate(' + this.centerItem.x + 'px,' + this.centerItem.y + 'px) translate(' + this.sizes.item.width + 'px) rotateY(-179.9deg)';
 					this.currentItem.style.transform = 'translate(' + this.centerItem.x + 'px,' + this.centerItem.y + 'px) translate(' + this.sizes.item.width + 'px) rotateY(-179.9deg)';
+					let h3 = this.currentItem.querySelector('h3');
+					classie.addClass(h3, 'hidden');
 				}
 				else {
 					classie.addClass( this.currentItem, 'photostack-showback' );
