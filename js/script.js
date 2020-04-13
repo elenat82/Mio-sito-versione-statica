@@ -1,14 +1,20 @@
+function showemail(stateWrapper, ready) {
+        $('#email').removeClass("hidden-contact");
+        ready();
+}
+function showtelefono(stateWrapper, ready) {
+        $('#telefono').removeClass("hidden-contact");
+        ready();
+}
+function showskype(stateWrapper, ready) {
+        $('#skype').removeClass("hidden-contact");
+        ready();
+}
+function showlinkedin(stateWrapper, ready) {
+        $('#linkedin').removeClass("hidden-contact");
+        ready();
+}
 $(document).ready(function () {
-        //introanimation
-        setTimeout(function () {
-                $('body').addClass('loaded');
-                $('.title-animation').animatedHeadline({
-                        animationType: 'rotate-3'
-                });
-        }, 3000);
-        setTimeout(function () {
-                $('.loaded #loader-wrapper').remove();
-        }, 4000);
 
         //fullpage plugin
         $('#fullpage').fullpage({
@@ -19,8 +25,19 @@ $(document).ready(function () {
                 navigationPosition: "right",
                 showActiveTooltip: false,
                 verticalCentered: false,
-                animateAnchor: true,
+                animateAnchor: false,
+                lazyLoading: false,
                 afterRender: function () {
+                        //introanimation
+                        setTimeout(function () {
+                                $('body').addClass('loaded');
+                                $('.title-animation').animatedHeadline({
+                                        animationType: 'rotate-3'
+                                });
+                        }, 3000);
+                        setTimeout(function () {
+                                $('.loaded #loader-wrapper').remove();
+                        }, 4000);
 
                 },
                 afterLoad: function (origin, destination, direction) {
@@ -31,7 +48,7 @@ $(document).ready(function () {
                                 $('#section-contatti > div').addClass('hidden');
                         }
                 },
-                onLeave: function(origin, destination, direction) {
+                onLeave: function (origin, destination, direction) {
                         if (origin.anchor == "profilo") {
                                 $("#biglietto").removeClass('hover');
                         }
@@ -193,10 +210,10 @@ $(document).ready(function () {
         window.onresize = onResize;
         window.requestAnimationFrame = requestAnimationFrame();
 
-        $("#biglietto").on('mouseenter', function() {
+        $("#biglietto").on('mouseenter', function () {
                 $(this).addClass('hover');
         });
-        
+
         $('#timeline-inner').jScrollPane();
 
         //photostack plugin
@@ -213,45 +230,27 @@ $(document).ready(function () {
                 ps.navigate("next");
         });
 
-        var rollbackTo = false;
-        var originalState = false;
-        function storeState(stateWrapper, ready) {
-                rollbackTo = stateWrapper.current;
-                console.log("storeState called: ", rollbackTo);
-                ready();
-        }
-        function rollback(stateWrapper, ready) {
-                console.log("rollback called: ", rollbackTo, originalState);
-                console.log("answers at the time of user input: ", stateWrapper.answers);
-                if (rollbackTo != false) {
-                        if (originalState == false) {
-                                originalState = stateWrapper.current.next;
-                                console.log('stored original state');
-                        }
-                        stateWrapper.current.next = rollbackTo;
-                        console.log('changed current.next to rollbackTo');
-                }
-                ready();
-        }
-
-        function restore(stateWrapper, ready) {
-                if (originalState != false) {
-                        stateWrapper.current.next = originalState;
-                        console.log('changed current.next to originalState');
-                }
-                ready();
-        }
-
         var convForm = $('.my-conv-form-wrapper').convform({
                 typeInputUi: 'input',
                 selectInputStyle: 'disable',
                 eventList: {
-                        onInputSubmit: function (convState, readyCallback) {
-                                console.log('convState: ', convState);
-
-                                readyCallback();
+                        onSubmitForm: function (convState) {
+                                setTimeout(function () {
+                                        $('#email').removeClass("hidden-contact");
+                                }, 0);
+                                setTimeout(function () {
+                                        $('#telefono').removeClass("hidden-contact");
+                                }, 500);
+                                setTimeout(function () {
+                                        $('#skype').removeClass("hidden-contact");
+                                }, 1000);
+                                setTimeout(function () {
+                                        $('#linkedin').removeClass("hidden-contact");
+                                }, 1500);
+                                
+                                convState.form.submit();
                         }
-                }
+                },
         });
 
         $('#reload-chat').on('click', function () {
@@ -260,13 +259,28 @@ $(document).ready(function () {
                         typeInputUi: 'input',
                         selectInputStyle: 'disable',
                         eventList: {
-                                onInputSubmit: function (convState, readyCallback) {
-                                        console.log('convState: ', convState);
-
-                                        readyCallback();
+                                onSubmitForm: function (convState) {
+                                        setTimeout(function () {
+                                                $('#email').removeClass("hidden-contact");
+                                        }, 0);
+                                        setTimeout(function () {
+                                                $('#telefono').removeClass("hidden-contact");
+                                        }, 500);
+                                        setTimeout(function () {
+                                                $('#skype').removeClass("hidden-contact");
+                                        }, 1000);
+                                        setTimeout(function () {
+                                                $('#linkedin').removeClass("hidden-contact");
+                                        }, 1500);
+                                        
+                                        convState.form.submit();
                                 }
-                        }
+                        },
                 });
+                $('#email').addClass("hidden-contact");
+                $('#telefono').addClass("hidden-contact");
+                $('#skype').addClass("hidden-contact");
+                $('#linkedin').addClass("hidden-contact");
         })
 });
 

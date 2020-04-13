@@ -143,9 +143,9 @@
  }
  #fp-nav ul li {
    display: block;
-   width: 60px;
-   height: 30px;
-   margin: 0px;
+   width: 30px;
+   height: 100px;
+   margin: 20px;
    position: relative;
  }
  .fp-slidesNav ul li {
@@ -167,10 +167,7 @@
    height: 100%;
    cursor: pointer;
    text-decoration: none;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: flex-end;
+   display: block;
  }
  
  .fp-slidesNav ul li a.active span,
@@ -182,12 +179,13 @@
  }
  
  #fp-nav ul li a.active span {
-   width: 100%;
+   width: 3px;
    background: rgb(var(--orange));
+   display: block;
  }
  #fp-nav ul li:hover a span {
-   width: 10px;
-   height: 10px;
+   /* width: 10px;
+   height: 10px; */
    /* margin: -5px 0px 0px -5px; */
  }
  
@@ -213,9 +211,11 @@
    transition: all 0.1s ease-in-out;
  }
  #fp-nav ul li a span {
-   height: 1.5px;
-   width: 50%;
-   background: var(--red);
+   background-color: #fff;
+   height: 100px;
+   width: 3px;
+   display: block;
+   margin: auto;
    -webkit-transition: all 0.1s ease-in-out;
    -moz-transition: all 0.1s ease-in-out;
    -o-transition: all 0.1s ease-in-out;
@@ -229,7 +229,7 @@
  }
  #fp-nav ul li .fp-tooltip {
    position: absolute;
-   top: 5px;
+   top: 50%;
    color: var(--dark-brown);
    white-space: nowrap;
    /* max-width: 220px; */
@@ -247,7 +247,7 @@
    opacity: 1;
  }
  #fp-nav ul li .fp-tooltip.fp-right {
-   right: 20px;
+   right: 2rem;
    z-index: 1;
  }
  #fp-nav ul li .active + .fp-tooltip.fp-right {

@@ -36,6 +36,8 @@
   <script src="js/classie.js"></script>
   <script src="js/photostack.js"></script>
   <script type="text/javascript" src="node_modules/jscrollpane/script/jquery.jscrollpane.min.js"></script>
+  <script src="js/autosize.min.js"></script>
+  <script src="js/jquery.convform.min.js"></script>
   <script src="js/script.js"></script>
   <script src="node_modules/webfontloader/webfontloader.js"></script>
   <script>
@@ -71,6 +73,9 @@
               </span>
             </h2>
           </div>
+          <div id="arrow-container">
+            <i class="fas fa-chevron-down"></i>
+          </div>
         </div>
       </div>
       <div class="section" id="section-profilo" data-tooltip="Profilo">
@@ -81,7 +86,7 @@
               <div class="w-33">**** Boarding Pass ****</div>
             </div>
             <div class="biglietto-center w-100 h-100">
-              <div class="biglietto-left w-66 h-100">
+              <div class="biglietto-left w-66 h-100 flex">
                 <div class="biglietto-content-left w-100 h-100">
                   <div class="img-container">
                     <img src="img/picture.png" alt="" itemprop="image">
@@ -125,13 +130,6 @@
         </div>
       </div>
       <div class="section" id="section-esperienze" data-tooltip="Esperienze">
-
-
-
-
-
-
-
         <div class="timeline-container">
           <div class="item">
             <div id="timeline">
@@ -279,7 +277,26 @@
                 <figcaption>
                   <h3 class="photostack-title">Appunti Digitali</h3>
                   <div class="photostack-back">
-                    <div><a itemprop="owns" href="https://www.appunti-digitali.it"></a></div>
+                    <article>
+                      <p class="descrizione">
+                        Ho deciso di raccogliere e mettere a disposizione di tutti ciò che imparo quotidianamente nel
+                        mio lavoro e durante lo studio. <br>Ho utilizzato Drupal ma tra poco pubblicherò una nuova
+                        versione realizzata con l'aiuto di Angular. Stay tuned!
+                      </p>
+                      <div class="technologies">
+                        <ul>
+                          <li><i class="fab fa-html5"></i></li>
+                          <li><i class="fab fa-css3-alt"></i></li>
+                          <li><i class="fab fa-drupal"></i></li>
+                        </ul>
+                      </div>
+                      <div class="links">
+                        <p class="cliente"></p>
+                        <p class="link"><a itemprop="owns" href="https://www.appunti-digitali.it" target="_blank"><i
+                              class="fas fa-external-link-alt"></i> Visita il sito dei miei Appunti Digitali</a></p>
+                      </div>
+                    </article>
+                    <div><a href=""></a></div>
                   </div>
                 </figcaption>
               </figure>
@@ -369,11 +386,25 @@
                 <figcaption>
                   <h3 class="photostack-title">Gocce</h3>
                   <div class="photostack-back">
-                    <div>Fish don't fry in the kitchen and beans don't burn on the grill. Took a whole lotta tryin' just
-                      to get up that hill. Baby if you've ever wondered - wondered whatever became of me. Lorem ipsum
-                      dolor sit, amet consectetur adipisicing elit. Labore laboriosam repudiandae sed cupiditate
-                      corporis consequatur vero beatae perferendis veniam, nisi ducimus non culpa dolores eius, rem
-                      suscipit corrupti debitis eos.</div>
+                    <article>
+                      <p class="descrizione">
+                        Questo è il sito che ho realizzato durante il corso di PHP. Ci sono quasi tutte le funzionalità
+                        di un e-commerce (catalogo, carrello, filtri di ricerca....).<br> Ho utilizzato PHP procedurale
+                        e un database MySQL.
+                      </p>
+                      <div class="technologies">
+                        <ul>
+                          <li><i class="fab fa-html5"></i></li>
+                          <li><i class="fab fa-css3-alt"></i></li>
+                          <li><i class="fab fa-php"></i></li>
+                        </ul>
+                      </div>
+                      <div class="links">
+                        <p class="cliente"></p>
+                        <p class="link"><a href="https://www.elenatrudini.it/gocce/maggiorenne.html" target="_blank"><i
+                              class="fas fa-external-link-alt"></i> Visita il sito Gocce</a></p>
+                      </div>
+                    </article>
                   </div>
                 </figcaption>
               </figure>
@@ -382,11 +413,24 @@
                 <figcaption>
                   <h3 class="photostack-title">Lanificio di Torino</h3>
                   <div class="photostack-back">
-                    <div>Fish don't fry in the kitchen and beans don't burn on the grill. Took a whole lotta tryin' just
-                      to get up that hill. Baby if you've ever wondered - wondered whatever became of me. Lorem ipsum
-                      dolor sit amet consectetur adipisicing elit. Ea, impedit? Tenetur possimus illo quisquam! Corrupti
-                      fugiat consequatur illum fugit, quo odit est beatae ullam! Quisquam minus velit quidem assumenda
-                      obcaecati?</div>
+                    <article>
+                      <p class="descrizione">
+                        Durante lo stage in VDU ho iniziato ad avvicinarmi a Drupal e questo è il primo sito che ho
+                        realizzato per intero. .<br>
+                      </p>
+                      <div class="technologies">
+                        <ul>
+                          <li><i class="fab fa-html5"></i></li>
+                          <li><i class="fab fa-css3-alt"></i></li>
+                          <li><i class="fab fa-drupal"></i></li>
+                        </ul>
+                      </div>
+                      <div class="links">
+                        <p class="cliente">VDU</p>
+                        <p class="link"><a href="https://www.lanificioditorino.it/" target="_blank"><i
+                              class="fas fa-external-link-alt"></i> Visita il sito del Lanificio di Torino</a></p>
+                      </div>
+                    </article>
                   </div>
                 </figcaption>
               </figure>
@@ -429,54 +473,240 @@
                   <div class="my-conv-form-wrapper device-content">
                     <form name="contattiform" action="javascript:void(0);">
                       <input type="text" name="domanda0" data-conv-question="Ciao! Come ti chiami?">
-                      <select name="domanda1"
-                        data-conv-question="Piacere di conoscerti, {domanda0}:0! Ti è piaciuto il mio viaggio?"
-                        data-callback="storeState">
-                        <option value="si1">Sì :)</option>
-                        <option value="no1">No :(</option>
+                      <select name="piaciuto"
+                        data-conv-question="Piacere di conoscerti, {domanda0}:0! Ti è piaciuto il mio viaggio?">
+                        <option value="sipiaciuto">Sì &#128150;</option>
+                        <option value="nopiaciuto">No &#128549;</option>
                       </select>
-                      <div data-conv-fork="domanda1">
-                        <div data-conv-case="si1">
+                      <div data-conv-fork="piaciuto">
+                        <div data-conv-case="sipiaciuto">
                           <input type="text" data-conv-question="Mi fa piacere!" data-no-answer="true">
-                          <select name="domanda2" data-conv-question="Vorresti scrivermi un'email?">
-                            <option value="si2">Sì, certo!</option>
-                            <option value="no2">No....</option>
+                          <select name="emailsipiaciuto" data-conv-question="Vorresti scrivermi un'email?">
+                            <option value="siemailsipiaciuto" data-callback="showemail">Sì, certo!</option>
+                            <option value="noemailsipiaciuto">No....</option>
                           </select>
-                          <div data-conv-fork="domanda2">
-                            <div data-conv-case="si2">
+                          <div data-conv-fork="emailsipiaciuto">
+                            <div data-conv-case="siemailsipiaciuto">
                               <input type="text" data-conv-question="Il mio indirizzo è e.trudini82@gmail.com"
                                 data-no-answer="true">
-                            </div>
-                            <div data-conv-case="no2">
-                              <select name="domanda3" data-conv-question="Forse preferisci telefonarmi?">
-                                <option value="si3">Ok!</option>
-                                <option value="no3">Neanche</option>
+                              <select name="telefonosiemail" data-conv-question="Ti piacerebbe anche telefonarmi?">
+                                <option value="sitelefonosiemail" data-callback="showtelefono">Ok!</option>
+                                <option value="notelefonosiemail">Neanche &#128245;</option>
                               </select>
-                              <div data-conv-fork="domanda3">
-                                <div data-conv-case="si3">
+                              <div data-conv-fork="telefonosiemail">
+                                <div data-conv-case="sitelefonosiemail">
                                   <input type="text" data-conv-question="Il mio numero di telefono è 366 167 2558"
                                     data-no-answer="true">
-                                </div>
-                                <div data-conv-case="no3">
-                                  <select name="domanda4"
-                                    data-conv-question="Se preferisci Skype posso darti il mio contatto">
-                                    <option value="si4">Va bene!</option>
-                                    <option value="no4">Nemmeno</option>
+                                  <select name="skypesitelefono1"
+                                    data-conv-question="Possiamo sentirci anche via Skype">
+                                    <option value="siskypesitelefono" data-callback="showskype">Certo! &#9996;</option>
+                                    <option value="noskypesitelefono">No.....</option>
                                   </select>
-                                  <div data-conv-fork="domanda4">
-                                    <div data-conv-case="si4">
+                                  <div data-conv-fork="skypesitelefono1">
+                                    <div data-conv-case="siskypesitelefono">
+                                      <input type="text" data-conv-question="Il mio Skype ID è elenatrudini82"
+                                        data-no-answer="true">
+                                      <select name="linkedinsiskype1"
+                                        data-conv-question="E il mio profilo Linkedin, vorresti visitarlo?">
+                                        <option value="silinkedinsiskype" data-callback="showlinkedin">Perchè no!
+                                          &#10004;</option>
+                                        <option value="nolinkedinsiskype">Neanche..... &#10006;</option>
+                                      </select>
+                                      <div data-conv-fork="linkedinsiskype1">
+                                        <div data-conv-case="silinkedinsiskype">
+                                          <input type="text"
+                                            data-conv-question="Per visitare il mio profilo su Linkedin vai a questo indirizzo: https://www.linkedin.com/in/elenatrudini/"
+                                            data-no-answer="true">
+                                        </div>
+                                        <div data-conv-case="nolinkedinsiskype">
+                                          <input type="text"
+                                            data-conv-question="Va bene, grazie per la visita {domanda0}:0!"
+                                            data-no-answer="true">
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div data-conv-case="noskypesitelefono">
+                                      <select name="linkedinnoskype1"
+                                        data-conv-question="Comunque ho anche un profilo Linkedin.... vuoi il link?">
+                                        <option value="silinkedinnoskype" data-callback="showlinkedin">Sì certo!
+                                        </option>
+                                        <option value="nolinkedinnoskype">No nemmeno &#10060;</option>
+                                      </select>
+                                      <div data-conv-fork="linkedinnoskype1">
+                                        <div data-conv-case="silinkedinnoskype">
+                                          <input type="text"
+                                            data-conv-question="Questo è il link del mio profilo: https://www.linkedin.com/in/elenatrudini/"
+                                            data-no-answer="true">
+                                        </div>
+                                        <div data-conv-case="nolinkedinnoskype">
+                                          <input type="text" data-conv-question="Va bene.... Arrivederci {domanda0}:0!"
+                                            data-no-answer="true">
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div data-conv-case="notelefonosiemail">
+                                  <select name="skypenotelefono2"
+                                    data-conv-question="Se preferisci Skype posso darti il mio contatto">
+                                    <option value="siskypenotelefono" data-callback="showskype">Va bene! &#11088;
+                                    </option>
+                                    <option value="noskypenotelefono">Nemmeno</option>
+                                  </select>
+                                  <div data-conv-fork="skypenotelefono2">
+                                    <div data-conv-case="siskypenotelefono">
                                       <input type="text" data-conv-question="Su Skype mi chiamo elenatrudini82"
                                         data-no-answer="true">
-                                    </div>
-                                    <div data-conv-case="no4">
-                                      <select name="domanda5"
+                                      <select name="linkedinsiskype2"
                                         data-conv-question="Ho anche un profilo Linkedin, vuoi visitarlo?">
-                                        <option value="si5">Certamente!</option>
-                                        <option value="no5">No per niente.....</option>
+                                        <option value="silinkedinsiskype" data-callback="showlinkedin">Certamente!
+                                          &#127752;</option>
+                                        <option value="nolinkedinsiskype">No per niente.....</option>
                                       </select>
-                                      <div data-conv-fork="domanda5">
-                                        <div data-conv-case="si5"></div>
-                                        <div data-conv-case="no5"></div>
+                                      <div data-conv-fork="linkedinsiskype2">
+                                        <div data-conv-case="silinkedinsiskype">
+                                          <input type="text"
+                                            data-conv-question="Ecco il link: https://www.linkedin.com/in/elenatrudini/"
+                                            data-no-answer="true">
+                                        </div>
+                                        <div data-conv-case="nolinkedinsiskype">
+                                          <input type="text"
+                                            data-conv-question="Come vuoi..... &#128077; Alla prossima!"
+                                            data-no-answer="true">
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div data-conv-case="noskypenotelefono">
+                                      <select name="linkedinnoskype2"
+                                        data-conv-question="Conosci Linkedin? Ho un profilo, posso darti il link?">
+                                        <option value="silinkedinnoskype" data-callback="showlinkedin">Certamente!
+                                          &#128285;</option>
+                                        <option value="nolinkedinnoskype">Uhm... no grazie!</option>
+                                      </select>
+                                      <div data-conv-fork="linkedinnoskype2">
+                                        <div data-conv-case="silinkedinnoskype">
+                                          <input type="text"
+                                            data-conv-question="A questo indirizzo puoi trovare il mio profilo: https://www.linkedin.com/in/elenatrudini/"
+                                            data-no-answer="true">
+                                        </div>
+                                        <div data-conv-case="nolinkedinnoskype">
+                                          <input type="text" data-conv-question="Grazie per la visita {domanda0}:0!"
+                                            data-no-answer="true">
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div data-conv-case="noemailsipiaciuto">
+                              <select name="telefononoemail" data-conv-question="Forse preferisci telefonarmi?">
+                                <option value="sitelefononoemail" data-callback="showtelefono">Ok!</option>
+                                <option value="notelefononoemail">Neanche</option>
+                              </select>
+                              <div data-conv-fork="telefononoemail">
+                                <div data-conv-case="sitelefononoemail">
+                                  <input type="text" data-conv-question="Ecco il mio numero: 366 167 2558"
+                                    data-no-answer="true">
+                                  <select name="skypesitelefono2"
+                                    data-conv-question="Sono raggiungibile anche via Skype... che ne dici?">
+                                    <option value="siskypesitelefono" data-callback="showskype">Va bene! &#128293;
+                                    </option>
+                                    <option value="noskypesitelefono">Nemmeno</option>
+                                  </select>
+                                  <div data-conv-fork="skypesitelefono2">
+                                    <div data-conv-case="siskypesitelefono">
+                                      <input type="text"
+                                        data-conv-question="Puoi trovarmi su Skype con l'ID elenatrudini82"
+                                        data-no-answer="true">
+                                      <select name="linkedinsiskype3"
+                                        data-conv-question="Posso darti anche il link del mio profilo Linkedin?">
+                                        <option value="silinkedinsiskype" data-callback="showlinkedin">Certamente!
+                                        </option>
+                                        <option value="nolinkedinsiskype">No grazie.....</option>
+                                      </select>
+                                      <div data-conv-fork="linkedinsiskype3">
+                                        <div data-conv-case="silinkedinsiskype">
+                                          <input type="text"
+                                            data-conv-question="Per visitare il mio profilo vai su: https://www.linkedin.com/in/elenatrudini/"
+                                            data-no-answer="true">
+                                        </div>
+                                        <div data-conv-case="nolinkedinsiskype">
+                                          <input type="text"
+                                            data-conv-question="Arrivederci {domanda0}:0! &#128522; &#128522; &#128522; &#128522; "
+                                            data-no-answer="true">
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div data-conv-case="noskypesitelefono">
+                                      <select name="linkedinnoskype3"
+                                        data-conv-question="Guarda il mio profilo Linkedin, ti va?">
+                                        <option value="silinkedinnoskype" data-callback="showlinkedin">Certamente!
+                                        </option>
+                                        <option value="nolinkedinnoskype">Non mi va..... &#128400; &#128400; &#128400;
+                                        </option>
+                                      </select>
+                                      <div data-conv-fork="linkedinnoskype3">
+                                        <div data-conv-case="silinkedinnoskype">
+                                          <input type="text"
+                                            data-conv-question="Trovi il mio profilo a questo indirizzo: https://www.linkedin.com/in/elenatrudini/"
+                                            data-no-answer="true">
+                                        </div>
+                                        <div data-conv-case="nolinkedinnoskype">
+                                          <input type="text" data-conv-question="Ok... Torna a trovarmi &#128521;"
+                                            data-no-answer="true">
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div data-conv-case="notelefononoemail">
+                                  <select name="skypenotelefono1"
+                                    data-conv-question="Se preferisci Skype posso darti il mio contatto">
+                                    <option value="siskypenotelefono" data-callback="showskype">Va bene!</option>
+                                    <option value="noskypenotelefono">Nemmeno</option>
+                                  </select>
+                                  <div data-conv-fork="skypenotelefono1">
+                                    <div data-conv-case="siskypenotelefono">
+                                      <input type="text" data-conv-question="Su Skype mi chiamo elenatrudini82"
+                                        data-no-answer="true">
+                                      <select name="linkedinsiskype4"
+                                        data-conv-question="Sono presente anche su Linkedin, vuoi il link per visitare il mio profilo?">
+                                        <option value="silinkedinsiskype" data-callback="showlinkedin">Certamente!
+                                        </option>
+                                        <option value="nolinkedinsiskype">Non mi interessa..... &#128465; </option>
+                                      </select>
+                                      <div data-conv-fork="linkedinsiskype4">
+                                        <div data-conv-case="silinkedinsiskype">
+                                          <input type="text"
+                                            data-conv-question="Visita il mio profilo all'indirizzo https://www.linkedin.com/in/elenatrudini/"
+                                            data-no-answer="true">
+                                        </div>
+                                        <div data-conv-case="nolinkedinsiskype">
+                                          <input type="text"
+                                            data-conv-question="&#128524; &#128524; &#128524; &#128524; &#128524;"
+                                            data-no-answer="true">
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div data-conv-case="noskypenotelefono">
+                                      <select name="linkedinnoskype4"
+                                        data-conv-question="Sono iscritta a Linkedin, se ti va posso darti il link del mio profilo...">
+                                        <option value="silinkedinnoskype" data-callback="showlinkedin">Certamente!
+                                        </option>
+                                        <option value="nolinkedinnoskype">No per nulla.....</option>
+                                      </select>
+                                      <div data-conv-fork="linkedinnoskype4">
+                                        <div data-conv-case="silinkedinnoskype">
+                                          <input type="text"
+                                            data-conv-question="Eccolo qui: https://www.linkedin.com/in/elenatrudini/"
+                                            data-no-answer="true">
+                                        </div>
+                                        <div data-conv-case="nolinkedinnoskype">
+                                          <input type="text"
+                                            data-conv-question="Ok... &#128531; &#128531; &#128531; &#128531; &#128531; "
+                                            data-no-answer="true">
+                                        </div>
                                       </div>
                                     </div>
                                   </div>
@@ -485,10 +715,6 @@
                             </div>
                           </div>
                         </div>
-                        <div data-conv-case="no1">
-                          <input type="text" data-conv-question="Mi dispiace...." data-no-answer="true">
-                        </div>
-                        <!-- aggiungere nel posto giusto data-callback="rollback" per tornare all'inizio -->
                       </div>
                     </form>
                   </div>
@@ -504,11 +730,15 @@
             </div>
             <div class="contacts-container w-33">
               <ul>
-                <li id="telefono"><a href="tel:+393661672558"><i class="fas fa-phone-alt"></i> +39 366 167 2558</a></li>
-                <li id="email"><a href="mailto:e.trudini82@gmail.com"><i class="fas fa-at"></i> e.trudini82@gmail.com</a></li>
-                <li id="skype"><a href="skype:elenatrudini82?chat"><i class="fab fa-skype"></i> elenatrudini82</a></li>
-                <li id="linkedin"><a itemprop="sameAs" href="https://www.linkedin.com/in/elenatrudini/"><i
-                      class="fab fa-linkedin-in"></i> www.linkedin.com</a>
+                <li id="email" class="hidden-contact"><a href="mailto:e.trudini82@gmail.com"><i class="fas fa-at"></i>
+                    e.trudini82@gmail.com</a></li>
+                <li id="telefono" class="hidden-contact"><a href="tel:+393661672558"><i class="fas fa-phone-alt"></i>
+                    +39 366 167 2558</a></li>
+                <li id="skype" class="hidden-contact"><a href="skype:elenatrudini82?chat"><i class="fab fa-skype"></i>
+                    elenatrudini82</a></li>
+                <li id="linkedin" class="hidden-contact"><a itemprop="sameAs"
+                    href="https://www.linkedin.com/in/elenatrudini/"><i class="fab fa-linkedin-in"></i>
+                    www.linkedin.com</a>
                 </li>
               </ul>
               <div class="download-btn">
@@ -523,7 +753,6 @@
     </div>
   </div>
   <h1><span itemprop="name">ELENA TRUDINI</span> :: <span itemprop="jobTitle">Front End Developer</span></h1>
-  <script src="js/jquery.convform.min.js"></script>
 </body>
 
 </html>

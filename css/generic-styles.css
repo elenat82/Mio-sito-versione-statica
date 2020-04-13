@@ -33,6 +33,24 @@
   }
 }
 
+@keyframes i {
+  0% {
+      -webkit-transform:translateY(0);
+      transform:translateY(0)}
+  10% {
+      -webkit-transform:translateY(10px);
+      transform:translateY(10px)}
+  20% {
+      -webkit-transform:translateY(0);
+      transform:translateY(0)}
+  30% {
+      -webkit-transform:translateY(10px);
+      transform:translateY(10px)}
+  40% { 
+      -webkit-transform:translateY(0);
+      transform:translateY(0)}
+}
+
 * {
 	box-sizing: border-box;
 }
