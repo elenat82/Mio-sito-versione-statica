@@ -880,10 +880,15 @@ figure.photostack-current::after {
           transform-style: preserve-3d;
 }
 
-.photostack-perspective figure,
-.photostack-perspective figure div {
-  /* -webkit-backface-visibility: hidden;
-  backface-visibility: hidden; */
+.photostack-perspective figure:not(.girato),
+.photostack-perspective figure:not(.girato) div {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.photostack-perspective figure.girato .photostack-back {
+  -webkit-backface-visibility: inherit;
+          backface-visibility: inherit;
 }
 
 .photostack-perspective figure.photostack-flip {

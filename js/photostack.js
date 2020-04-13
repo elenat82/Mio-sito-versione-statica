@@ -488,6 +488,7 @@
 					this.currentItem.style.WebkitTransform = 'translate(' + this.centerItem.x + 'px,' + this.centerItem.y + 'px) rotateY(0deg)';
 					this.currentItem.style.transform = 'translate(' + this.centerItem.x + 'px,' + this.centerItem.y + 'px) rotateY(0deg)';
 					let h3 = this.currentItem.querySelector('h3');
+					classie.removeClass(this.currentItem, 'girato')
 					let time = setTimeout(function() {
 						classie.removeClass(h3, 'hidden');
 					}, 1000);
@@ -506,6 +507,7 @@
 					this.currentItem.style.transform = 'translate(' + this.centerItem.x + 'px,' + this.centerItem.y + 'px) translate(' + this.sizes.item.width + 'px) rotateY(-179.9deg)';
 					let h3 = this.currentItem.querySelector('h3');
 					classie.addClass(h3, 'hidden');
+					classie.addClass(this.currentItem, 'girato');
 				}
 				else {
 					classie.addClass( this.currentItem, 'photostack-showback' );

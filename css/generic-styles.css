@@ -1,3 +1,5 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
 @font-face {
   font-family: "Athene";
   src: url("fonts/Athene.eot");
@@ -33,6 +35,24 @@
   }
 }
 
+@-webkit-keyframes i {
+  0% {
+      -webkit-transform:translateY(0);
+      transform:translateY(0)}
+  10% {
+      -webkit-transform:translateY(10px);
+      transform:translateY(10px)}
+  20% {
+      -webkit-transform:translateY(0);
+      transform:translateY(0)}
+  30% {
+      -webkit-transform:translateY(10px);
+      transform:translateY(10px)}
+  40% { 
+      -webkit-transform:translateY(0);
+      transform:translateY(0)}
+}
+
 @keyframes i {
   0% {
       -webkit-transform:translateY(0);
@@ -52,7 +72,8 @@
 }
 
 * {
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 
 /*
@@ -108,6 +129,9 @@
 }
 
 .flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
 }
 
