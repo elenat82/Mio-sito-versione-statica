@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Curriculum Vitae e portfolio di Elena Trudini, Front End Developer a Torino dal 2015">
   <title>Elena Trudini :: Front End Developer</title>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-50859494-1"></script>
@@ -58,7 +59,7 @@
 
   <div id="content">
     <div id="fullpage">
-      <div class="section" id="section-home" data-tooltip="Home">
+      <div class="section" id="section-home" data-tooltip="HOME">
         <div class="fading-background"></div>
         <canvas id="canvas"></canvas>
         <div class="section-content">
@@ -67,18 +68,15 @@
           </div>
           <div class="title-animation">
             <h2 class="ah-headline">
-              <span class="ah-words-wrapper">
-                <b class="is-visible">Curriculum &nbsp; Vitae</b>
-                <b>Diario &nbsp; di &nbsp; Viaggio</b>
-              </span>
+              <span class="ah-words-wrapper" id="title-animations-container"></span>
             </h2>
           </div>
-          <div id="arrow-container">
+          <!-- <div id="arrow-container">
             <i class="fas fa-chevron-down"></i>
-          </div>
+          </div> -->
         </div>
       </div>
-      <div class="section" id="section-profilo" data-tooltip="Profilo">
+      <div class="section" id="section-profilo" data-tooltip="PROFILO">
         <div class="section-content">
           <div id="biglietto">
             <div class="biglietto-top">
@@ -129,7 +127,7 @@
           </div>
         </div>
       </div>
-      <div class="section" id="section-esperienze" data-tooltip="Esperienze">
+      <div class="section fp-auto-height-responsive" id="section-esperienze" data-tooltip="ESPERIENZE">
         <div class="timeline-container">
           <div class="item">
             <div id="timeline">
@@ -139,10 +137,10 @@
                   <div class="timeline-section">
                     <p class="month">Agosto - Oggi</p>
                     <p class="description">
-                      Attualmente sto lavorando sui progetti di un importante cliente del settore asicurativo.<br>
-                      In particolare mi occupo di interventi sulle app per Ipad utilizzate dagli agenti assicurativi nel
-                      loro lavoro quotidiano.<br>
-                      Utilizzo Angular5 + Ionic 3 oppure AngularJS + Cordova, insieme a Sass e Webpack.
+                      Attualmente sto lavorando in consulenza presso Reply sui progetti di un importante cliente del settore asicurativo.<br>
+                      In particolare mi occupo, assieme ad un team di una decina di persone, di bug fixing e di evolutive su tre app ibride pensate per web / iPad.<br>
+                      Utilizzo Angular5 + Ionic 3 oppure AngularJS + Cordova, insieme a Sass e Webpack.<br>
+                      La gestione del progetto è basata sulla metodologia Agile con l'aiuto di tool come Jira e Gitlab.
                     </p>
                     <p class="hashtags">
                       <span>#Reply</span> <span>#metodologiaAgile</span>
@@ -256,7 +254,7 @@
           </div>
         </div>
       </div>
-      <div class="section" id="section-portfolio" data-tooltip="Portfolio">
+      <div class="section fp-auto-height-responsive" id="section-portfolio" data-tooltip="PORTFOLIO">
         <div class="section-content">
           <div id="photostack" class="photostack">
             <div>
@@ -292,7 +290,7 @@
                       </div>
                       <div class="links">
                         <p class="cliente"></p>
-                        <p class="link"><a itemprop="owns" href="https://www.appunti-digitali.it" target="_blank"><i
+                        <p class="link"><a itemprop="owns" href="https://www.appunti-digitali.it" target="_blank" rel="noopener"><i
                               class="fas fa-external-link-alt"></i> Visita il sito dei miei Appunti Digitali</a></p>
                       </div>
                     </article>
@@ -320,7 +318,7 @@
                       </div>
                       <div class="links">
                         <p class="cliente"></p>
-                        <p class="link"><a href="http://www.donatellapadolano.it/" target="_blank"><i
+                        <p class="link"><a href="http://www.donatellapadolano.it/" target="_blank" rel="noopener"><i
                               class="fas fa-external-link-alt"></i> Visita il sito di Donatella</a></p>
                       </div>
                     </article>
@@ -347,7 +345,7 @@
                       </div>
                       <div class="links">
                         <p class="cliente"></p>
-                        <p class="link"><a href="http://www.ejadaunited.com/en" target="_blank"><i
+                        <p class="link"><a href="http://www.ejadaunited.com/en" target="_blank" rel="noopener"><i
                               class="fas fa-external-link-alt"></i> Visita il sito di Ejada</a></p>
                       </div>
                     </article>
@@ -374,7 +372,7 @@
                       </div>
                       <div class="links">
                         <p class="cliente">Sixeleven</p>
-                        <p class="link"><a href="http://www.elarisholding.com/" target="_blank"><i
+                        <p class="link"><a href="http://www.elarisholding.com/" target="_blank" rel="noopener"><i
                               class="fas fa-external-link-alt"></i> Visita il sito di Ejada</a></p>
                       </div>
                     </article>
@@ -401,7 +399,7 @@
                       </div>
                       <div class="links">
                         <p class="cliente"></p>
-                        <p class="link"><a href="https://www.elenatrudini.it/gocce/maggiorenne.html" target="_blank"><i
+                        <p class="link"><a href="https://www.elenatrudini.it/gocce/maggiorenne.html" target="_blank" rel="noopener"><i
                               class="fas fa-external-link-alt"></i> Visita il sito Gocce</a></p>
                       </div>
                     </article>
@@ -427,7 +425,7 @@
                       </div>
                       <div class="links">
                         <p class="cliente">VDU</p>
-                        <p class="link"><a href="https://www.lanificioditorino.it/" target="_blank"><i
+                        <p class="link"><a href="https://www.lanificioditorino.it/" target="_blank" rel="noopener"><i
                               class="fas fa-external-link-alt"></i> Visita il sito del Lanificio di Torino</a></p>
                       </div>
                     </article>
@@ -464,7 +462,7 @@
           </div>
         </div>
       </div>
-      <div class="section" id="section-contatti" data-tooltip="Contatti">
+      <div class="section fp-auto-height-responsive" id="section-contatti" data-tooltip="CONTATTI">
         <div class="section-content hidden">
           <div class="flex">
             <div class="device-container w-66">

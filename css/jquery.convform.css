@@ -258,11 +258,11 @@ div.conv-form-wrapper div.options:after {
 }
 div.conv-form-wrapper div.options div.option {
     padding: 7px 12px;
-    border: 1px solid rgba(var(--orange),0.5);
+    border: 1px solid rgba(235, 92, 11,0.5);
     display: inline-block;
     margin: 5px;
     background: #fff;
-    color: var(--red);
+    color: #7d2941;
     cursor: pointer;
     -webkit-border-radius: 20px;
             border-radius: 20px;
@@ -310,7 +310,7 @@ div.conv-form-wrapper  div#messages div.message.to {
             border-top-left-radius: 0;
 }
 div.conv-form-wrapper div#messages div.message.from {
-    background: var(--red);
+    background: #7d2941;
     color: #fff;
     -webkit-border-top-right-radius: 0;
             border-top-right-radius: 0;
@@ -357,14 +357,14 @@ div.conv-form-wrapper div#messages div.message.from {
     }
 }
 div.conv-form-wrapper div.options div.option:hover {
-    background: rgb(var(--orange));
-    color: var(--beige);
+    background: rgb(235, 92, 11);
+    color: #f2efe5;
     -webkit-transition: all 300ms ease-in;
     -o-transition: all 300ms ease-in;
     transition: all 300ms ease-in;
 }
 div.conv-form-wrapper div.options div.option.selected {
-    background: var(--red);
+    background: #7d2941;
     color: #fff;
 }
 div.conv-form-wrapper div.options div.option.selected:hover {
@@ -376,7 +376,7 @@ form.convFormDynamic button.submit {
     border: none;
     float: left;
     margin: 5px;
-    color: var(--red);
+    color: #7d2941;
     cursor: pointer;
     -webkit-border-radius: 8px;
             border-radius: 8px;
@@ -393,7 +393,7 @@ form.convFormDynamic button.submit {
 
 
 form.convFormDynamic button.submit:hover {
-    background: var(--red);
+    background: #7d2941;
     color: #fff;
     -webkit-transition: all 300ms ease-in;
     -o-transition: all 300ms ease-in;
@@ -425,14 +425,14 @@ span.clear {
 .spinLoader,
 .spinLoader:before,
 .spinLoader:after {
-    background: var(--red) !important;
+    background: #7d2941 !important;
     -webkit-animation: spinLoaderChat 1s infinite ease-in-out;
     animation: spinLoaderChat 1s infinite ease-in-out;
     width: 1em;
     height: 4em;
 }
 .spinLoader {
-    color: var(--red) !important;
+    color: #7d2941 !important;
     text-indent: -9999em;
     margin: 50% auto;
     position: relative;

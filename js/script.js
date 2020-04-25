@@ -14,8 +14,11 @@ function showlinkedin(stateWrapper, ready) {
         $('#linkedin').removeClass("hidden-contact");
         ready();
 }
-$(document).ready(function () {
 
+$(document).ready(function () {
+        var mm768 = window.matchMedia('(max-width: 768px)');
+        var mm670 = window.matchMedia('(max-width: 670px)');
+        var mm520 = window.matchMedia('(max-width: 520px)');
         //fullpage plugin
         $('#fullpage').fullpage({
                 licenseKey: "98CCD753-00DD494A-9A2464B6-1E62E55A",
@@ -27,7 +30,24 @@ $(document).ready(function () {
                 verticalCentered: false,
                 animateAnchor: false,
                 lazyLoading: false,
+                //responsiveWidth: 670,
                 afterRender: function () {
+                        if (mm768.matches) {
+                                $("#biglietto").addClass('hover');
+                        }
+                        if (mm670.matches && mm520.matches) {
+                                $('#title-animations-container').html('<b class="is-visible">Curriculum</b><b>Vitae</b><b>Diario</b><b>Di</b><b>Viaggio</b>');
+                        }
+                        else {
+                                $('#title-animations-container').html('<b class="is-visible">Curriculum Vitae</b><b>Diario di Viaggio</b>');
+                        }
+                        if (mm670.matches) {
+                                /* $('#section-esperienze').addClass('fp-auto-height');
+                                $('#section-portfolio').addClass('fp-auto-height'); */
+                        }
+                        if (mm520.matches) {
+
+                        }
                         //introanimation
                         setTimeout(function () {
                                 $('body').addClass('loaded');
@@ -49,7 +69,7 @@ $(document).ready(function () {
                         }
                 },
                 onLeave: function (origin, destination, direction) {
-                        if (origin.anchor == "profilo") {
+                        if (origin.anchor == "profilo" && !mm768.matches && !mm670.matches && !mm520.matches) {
                                 $("#biglietto").removeClass('hover');
                         }
 
@@ -214,7 +234,8 @@ $(document).ready(function () {
                 $(this).addClass('hover');
         });
 
-        $('#timeline-inner').jScrollPane();
+        var timelineScroll = $('#timeline-inner').jScrollPane({ resizeSensor: true });
+
 
         //photostack plugin
 
@@ -222,11 +243,19 @@ $(document).ready(function () {
                 callback: function (item) { },
                 clickToFlip: true
         });
-        $("#cartolina-prec").click(function () {
+        $("#cartolina-prec").on('click', function (e) {
                 ps.navigate("prev");
         });
 
-        $("#cartolina-succ").click(function () {
+        $("#cartolina-succ").on('click', function (e) {
+                ps.navigate("next");
+        });
+
+        $("#cartolina-prec").on('touchstart', function (e) {
+                ps.navigate("prev");
+        });
+
+        $("#cartolina-succ").on('touchstart', function (e) {
                 ps.navigate("next");
         });
 
@@ -247,7 +276,7 @@ $(document).ready(function () {
                                 setTimeout(function () {
                                         $('#linkedin').removeClass("hidden-contact");
                                 }, 1500);
-                                
+
                                 convState.form.submit();
                         }
                 },
@@ -272,7 +301,7 @@ $(document).ready(function () {
                                         setTimeout(function () {
                                                 $('#linkedin').removeClass("hidden-contact");
                                         }, 1500);
-                                        
+
                                         convState.form.submit();
                                 }
                         },

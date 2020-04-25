@@ -130,11 +130,11 @@
 		for( var i = 0; i < this.itemsCount; ++i ) {
 			inner += '<span></span>';
 		}
-		var prevArrow = document.createElement('div');
+		var prevArrow = document.createElement('button');
 		prevArrow.id = 'cartolina-prec';
 		prevArrow.setAttribute('data-hint', 'Vai alla cartolina precedente');
 		prevArrow.innerHTML = '<i class="fas fa-chevron-left"></i>';
-		var nextArrow = document.createElement('div');
+		var nextArrow = document.createElement('button');
 		nextArrow.id = 'cartolina-succ';
 		nextArrow.setAttribute('data-hint', 'Vai alla cartolina successiva');
 		nextArrow.innerHTML = '<i class="fas fa-chevron-right"></i>';
@@ -350,7 +350,7 @@
 					var randXPos = Math.floor( Math.random() * lines ),
 						randYPos = Math.floor( Math.random() * columns ),
 						gridVal = grid[c][l-1],
-						translation = { x : gridVal.x, y : gridVal.y },
+						translation = { x : gridVal ? gridVal.x : 0, y : gridVal ? gridVal.y : 0 },
 						onEndTransitionFn = function() {
 							++cntItemsAnim;
 							if( support.transitions ) {

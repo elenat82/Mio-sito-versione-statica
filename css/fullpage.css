@@ -182,7 +182,7 @@
  
  #fp-nav ul li a.active span {
    width: 3px;
-   background: rgb(var(--orange));
+   background: rgb(235, 92, 11);
    display: block;
  }
  
@@ -208,6 +208,7 @@
  }
  #fp-nav ul li a span {
    background-color: #fff;
+   box-shadow: 1px 1px 1px #979ca1;
    height: 100px;
    width: 3px;
    display: block;
@@ -225,12 +226,13 @@
  #fp-nav ul li .fp-tooltip {
    position: absolute;
    top: 50%;
-   color: var(--dark-brown);
+   color: #2f120a;
    white-space: nowrap;
    display: block;
    opacity: 0;
    width: 0;
    cursor: pointer;
+   font-weight: bold;
  }
  #fp-nav ul li:hover .fp-tooltip,
  #fp-nav.fp-show-active a.active + .fp-tooltip {
@@ -245,7 +247,7 @@
    z-index: 1;
  }
  #fp-nav ul li .active + .fp-tooltip.fp-right {
-   color: var(--beige);
+   color: #f2efe5;
  }
  #fp-nav ul li .fp-tooltip.fp-left {
    left: 20px;
