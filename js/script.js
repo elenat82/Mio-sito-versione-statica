@@ -26,10 +26,10 @@ $(document).ready(function () {
                 recordHistory: false,
                 navigation: true,
                 navigationPosition: "right",
-                showActiveTooltip: false,
                 verticalCentered: false,
-                animateAnchor: false,
-                lazyLoading: false,
+                animateAnchor: true,
+                lazyLoading: true,
+                continuousVertical: true,
                 //responsiveWidth: 670,
                 afterRender: function () {
                         if (mm768.matches) {
